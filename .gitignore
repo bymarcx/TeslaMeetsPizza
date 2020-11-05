@@ -1,0 +1,8 @@
+## IGNORE IDEA
+.idea/*
+
+## NODE MODULES 
+node_modules
+
+## dist (build folder)
+dist

@@ -1,0 +1,19 @@
+// START.SCSS 
+// All great things starts here.
+
+p {
+    font-size: 20px;
+    color: $gray-600;
+    font-weight: 100;
+}
+
+.copy {
+    font-size: 16px;
+    color: $gray-400;
+    font-weight: 100;
+}
+
+a:hover {
+    color: $gray-600;
+    text-decoration: none;
+}

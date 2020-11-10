@@ -4,5 +4,7 @@
 ## NODE MODULES 
 node_modules
 
-## dist (build folder)
+## IGNORE DIST AND BUNDLED
 dist
+bundled
+

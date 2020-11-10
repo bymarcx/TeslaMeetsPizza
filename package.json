@@ -1,7 +1,7 @@
 {
   "name": "bt-boilerplate",
   "version": "1.0.0",
-  "description": "Bootstrap Boilerplate",
+  "description": "Bootstrap Boilerplate based on gulp",
   "main": "index.html",
   "scripts": {
     "start": "gulp",

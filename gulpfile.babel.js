@@ -14,6 +14,7 @@ import named from 'vinyl-named';
 
 const PRODUCTION = yargs.argv.prod;
 
+// *** COMPRESS OUR SCSS STYLES *** //
 export const CompressStyles = () => {
     return src(['src/scss/bundle.scss'])
         .pipe(sass().on('error', sass.logError))
@@ -22,6 +23,7 @@ export const CompressStyles = () => {
         .pipe(dest('dist/css'));
 }
 
+// *** BUNDLE OUR SCRIPTS *** //
 export const BundleScripts = () => {
     return src(['src/js/FooterJS/bundleFooter.js', 'src/js/HeaderJS/bundleHeader.js'])
         .pipe(named())
@@ -48,19 +50,23 @@ export const BundleScripts = () => {
         .pipe(dest('dist/js'));
 }
 
+// *** COPY OUR SOURCE FILES WHICH ARE NOT SCSS OR JS  *** //
 export const copySrcFiles = () => {
-    return src(['src/**/*','!src/{img,js,scss}','!src/{img,js,scss}/**/*'])
+    return src(['src/**/*','!src/{js,scss}','!src/{js,scss}/**/*'])
         .pipe(dest('dist'));
 }
 
+// *** DELETE OUR DIST FOLDER *** //
 export const cleanDist = () => del(['dist']);
 
+// *** WATCH FOR CHANGES IN OUR SCSS OR JS FOLDER *** //
 export const watchForChanges = () => {
     watch('src/scss/**/*.scss', CompressStyles);
     watch('src/js/**/*.js',BundleScripts);
     watch(['src/**/*','!src/{img,js,scss}','!src/{img,js,scss}/**/*'], copySrcFiles);
 }
 
+// *** COMPRESS ALL FILES FOR PRODUCTION *** //
 export const compress = () => {
     return src([
         "**/*",
@@ -73,16 +79,11 @@ export const compress = () => {
         "!package.json",
         "!package-lock.json",
     ])
-        .pipe(
-            gulpif(
-                file => file.relative.split(".").pop() !== "zip",
-                replace("_customtheme", info.name)
-            )
-        )
         .pipe(zip(`${info.name}.zip`))
         .pipe(dest('bundled'));
 };
 
+// *** TIME TO RUN EVERYTHING *** //
 export const dev = series(cleanDist, parallel(CompressStyles, copySrcFiles, BundleScripts), watchForChanges)
 export const build = series(cleanDist, parallel(CompressStyles, copySrcFiles, BundleScripts), compress)
 export default dev;

@@ -1,0 +1,31 @@
+@font-face {
+    font-family: 'GothamAlt';
+    font-style: normal;
+    font-weight: 300;
+    src: url('../fonts/HomepageBaukasten-Book.eot'), /* IE9 Compat Modes */
+         url('../fonts/HomepageBaukasten-Book.ttf') format('ttf'), /* IE6-IE8 */
+         url('../fonts/HomepageBaukasten-Book.woff2') format('woff2'), /* Super Modern Browsers */
+         url('../fonts/HomepageBaukasten-Book.woff') format('woff'), /* Modern Browsers */
+  }
+
+
+
+h2 {
+    font-size: 18px;
+    margin-bottom: 0px;
+    font-weight: lighter;
+    color: $gray-600;
+}
+
+h3 {
+    font-size: 32px;
+    line-height: 42px;
+    padding-right: 120px;
+    font-weight: bolder;
+}
+
+p{
+    font-size: 16px;
+    line-height: 25px;
+    color: $gray-600;
+}

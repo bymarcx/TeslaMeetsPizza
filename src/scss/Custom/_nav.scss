@@ -1,0 +1,68 @@
+// *************************************************************
+// ***********************   NAVIGATION  *********************** 
+// *************************************************************
+
+#fp-nav {
+    .fp-sr-only {
+        background: red;
+        height: 60px;
+        width: 5px;
+    }
+}
+
+#fp-nav ul li a.active span, #fp-nav ul li:hover a.active span {
+    margin: 0px;
+    border-radius: unset !important;
+    background: black;
+    height: 30px;
+    width: 5px;
+}
+
+#fp-nav ul li a span, #fp-nav ul li:hover a span {
+    margin: 0px 0 0px 1px;
+    border-radius: unset !important;
+    background: rgba(black,0.3);
+    height: 30px;
+    width: 1px;
+}
+
+#fp-nav ul li {
+    width: 0px;
+    height: 30px;
+    margin: 5px;
+
+    a {
+        top: -25px;
+    }
+}
+
+
+
+#fp-nav.big {
+
+    ul li a.active span, ul li:hover a.active span {
+        margin: 0px;
+        border-radius: unset !important;
+        background: black;
+        height: 50px;
+        width: 4px;
+    }
+
+    ul li  {
+        height: 15px;
+    }
+
+    ul li a.active {
+        top: -45px;
+        margin: 10px 0;
+    }
+    
+    ul li a span, ul li:hover a span {
+        margin: 0px 0 0px 1px;
+        border-radius: unset !important;
+        background: rgba(black,0.3);
+        height: 15px;
+        width: 1px;
+    }
+
+}

@@ -1,6 +1,12 @@
 // *****  PRE.SCSS  *****
-//first import bootstrap functions, then override variables, then import bootstrap
 
-@import "node_modules/bootstrap/scss/functions";
-@import '../Overrides/variables';
-@import 'node_modules/bootstrap/scss/bootstrap';
+// first import bootstrap functions, then override variables, then import bootstrap
+ @import "node_modules/bootstrap/scss/functions";
+ @import '../Overrides/variables';
+ @import 'node_modules/bootstrap/scss/bootstrap';
+
+ @import '../Custom/fullpage';
+// import CSS for FullPage.js
+// @import 'node_modules/fullpage.js/dist/fullpage'
+
+// fullpage and webpack is somehow now working together. :/

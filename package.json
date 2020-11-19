@@ -1,7 +1,7 @@
 {
-  "name": "bt-boilerplate",
+  "name": "TeslaMeetsPizza",
   "version": "1.0.0",
-  "description": "Bootstrap Boilerplate based on gulp",
+  "description": "Tesla Meets Pizza :: Project for Responsive Webdesign :: OMB-4",
   "main": "index.html",
   "scripts": {
     "start": "gulp",
@@ -14,7 +14,7 @@
     "@babel/preset-env": "^7.11.0",
     "@babel/register": "^7.10.5",
     "autoprefixer": "^9.8.6",
-    "babel-loader": "^8.1.0",
+    "babel-loader": "^8.2.1",
     "del": "^5.1.0",
     "gulp": "^4.0.2",
     "gulp-clean-css": "^4.3.0",
@@ -29,6 +29,7 @@
   },
   "dependencies": {
     "bootstrap": "^4.5.2",
+    "fullpage.js": "^3.0.9",
     "jquery": "^3.5.1",
     "popper.js": "^1.16.1"
   }

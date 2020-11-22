@@ -1,0 +1,152 @@
+
+#sec1 {
+    position: relative;
+
+    .cta {
+
+        p {
+            margin:0 !important;
+        }
+
+        @include media-breakpoint-up(lg) {
+            position: absolute;
+            bottom: 20px;
+            display: flex;
+        }
+
+        .btn.btn-primary {
+            width:100%;
+        
+            @media screen and (min-width: 440px) {
+                width: unset;
+            }
+        
+            @include media-breakpoint-up(md) {
+                font-size: 14px;
+                width: unset;
+           }
+        
+        }
+
+        .btn.btn-primary {
+            justify-self: flex-end;
+        }
+
+        .btn.btn-secondary {
+            margin-right: 10px;
+        }
+
+    }
+
+    .col--1 {
+        padding: 50px 20px 50px;
+
+        @include media-breakpoint-up(sm) {
+            padding: 60px 50px 50px;
+        }
+
+        h3 {
+            padding-right: 120px;
+        }
+
+        p {
+            margin: 20px 40px 20px 0;
+        } 
+
+        .starbox {
+            margin-top: 40px;
+            width: 100%;
+            padding: 30px 20px;
+            border-radius: 30px;
+            background-color: $gray-200;
+
+            .row {
+                .col-6 {
+                    padding: 0;
+                    height: 30px;
+                }
+            }
+
+            @include media-breakpoint-up(sm) {
+                padding: 30px 15px;
+            }
+
+            @include media-breakpoint-between(sm, md) {
+                width: 370px;
+            }
+
+            
+            h4 {
+                font-weight: bolder;
+                font-size: 21px;
+                text-align: center;
+                line-height: 30px;
+                margin-bottom: 20px;
+            }
+
+            p {
+                font-weight: bolder;
+                font-size: 14px;
+                margin: 5px 0 10px;
+                color: black;
+
+                &.star {
+                    font-size: 16px;
+                    justify-self: end;
+                    text-align: right;
+                }
+
+                @include media-breakpoint-up(sm) {
+                    font-size: 16px;
+
+                    &.star {
+                        font-size: 18px;
+                    }
+                }
+            }
+
+        }
+
+    }
+
+    .col--2 {
+        background: grey;
+        height: 100vh;
+    }
+
+
+    .collapse {
+        padding: 100px 0;
+        background: $gray-900;
+        color: $light;
+                    
+
+        .row:nth-of-type(even) {
+            .col-md-6:nth-of-type(2) {
+                padding-right:0px;
+            }
+        }
+
+        .row:nth-of-type(odd) {
+            .col-md-6:nth-of-type(2) {
+                padding-left:0px;
+            }
+        }
+
+        .col-md-6 {
+        
+            &:nth-of-type(odd) {
+                padding: 50px 100px;
+            }
+
+        }
+                   
+
+        img {
+            width: 100%;
+            height: auto;
+        }
+
+    }
+
+}

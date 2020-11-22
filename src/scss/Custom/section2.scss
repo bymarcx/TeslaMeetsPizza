@@ -1,0 +1,21 @@
+#sec2 {
+    .top {
+        height: 70vh;
+        background-image: url("../img/placeholder.png");
+        background-size: cover;
+        background-position: center;
+    }
+
+    .bottom {
+        height: 30vh;
+        display: flex;
+
+        .container {
+            align-self: center;
+        }
+
+        .btn.btn-primary {
+            margin-top: 10px;
+        }
+    }
+}

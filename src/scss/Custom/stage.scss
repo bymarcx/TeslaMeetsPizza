@@ -1,0 +1,118 @@
+#stage {
+    background-image: url("../img/placeholder.png");
+    background-size: cover;
+    background-position: center;
+
+    @include media-breakpoint-down(lg) {
+        height: 100vh;
+       
+        .container {
+
+             .row {
+                 padding: 0px;
+             }
+        }
+       
+    }
+
+    h1#headline {
+        text-align:center;
+        font-size: 20px;
+        font-weight: 600;
+        color: white;
+        padding-top: 20%;
+
+        @include media-breakpoint-up(lg) {
+            font-size: 40px;
+            padding-top: 5%;
+        }    
+
+    }
+
+    .facts {
+        position: absolute;
+        left: 50%;
+        transform: translate(-50%);
+        bottom: 10%;
+        padding:30px;
+        
+        @include media-breakpoint-up(xl) {
+            .col-md-8 {
+                padding: 0 80px;
+            }
+        }
+
+        @include media-breakpoint-up(xxl) {
+            .col-md-8 {
+                padding: 0 180px;
+            }
+        }
+
+        .col-md-3 {
+            padding: 0px 0 5px;
+
+            &:first-of-type, &:nth-of-type(2) {
+                border-right: 3px solid $light;
+            }
+
+            .btn.btn-primary {
+                color: white;
+                border-color: white;
+                position: relative;
+                top: 50%;
+                transform: translate(0, -50%);
+            }
+        }
+
+        .col-12 {
+            text-align:center;
+        }
+
+        .fact {
+            text-align: center;
+            color: $light;
+
+            &.big {
+                font-size: 23px;
+                font-weight: bolder;
+                margin-bottom: 5px;
+
+                span {
+                    font-size: 16px;
+                }
+
+                @include media-breakpoint-up(lg) {
+                    font-size: 35px;
+
+                    span {
+                        font-size: 18px;
+                    }
+                }
+
+            }
+            &.small {
+                font-size: 11px;
+
+                @include media-breakpoint-up(lg) {
+                    font-size: 14px;
+                }
+            }
+
+        } // .fact
+
+        .btn.btn-primary {
+            width:100%;
+        
+            @media screen and (min-width: 440px) {
+                width: 410px;
+            }
+        
+            @include media-breakpoint-up(md) {
+                width: unset;
+           }
+        
+        }
+
+    }
+
+} // #stage

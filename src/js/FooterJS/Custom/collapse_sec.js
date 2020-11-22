@@ -15,6 +15,12 @@ $(document).ready(function () {
                 document.querySelector('#fp-nav').classList.add('big');
             }
 
+            setTimeout(function() {
+                scrollToElement(collapseExample);
+                
+            }, 300);
+            
+
         }
         else {
             

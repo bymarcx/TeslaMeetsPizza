@@ -1,4 +1,8 @@
 $(document).ready(function() {
+
+  // It's only fullpage on desktop!
+  if($(window).width() > 992) {
+
     $('#fullpage').fullpage({
       //options here
       scrollBar: true,
@@ -15,15 +19,16 @@ $(document).ready(function() {
       afterLoad: function( origin, destination, direction){
       var loadedSection = this;
 
-        //using index to change logo color.
+        // using destination index to change logo color.
         if(destination.index == 0){
           document.getElementById("textlogo").style.fill="white";
         }
         if(destination.index == 1){
           document.getElementById("textlogo").style.fill="black";
+          $(".fade").fadeIn();
         }
         if(destination.index == 2){
-          document.getElementById("textlogo").style.fill="black";
+          document.getElementById("textlogo").style.fill="white";
         }
 
       } 
@@ -32,4 +37,7 @@ $(document).ready(function() {
 
     //methods
     $.fn.fullpage.setAllowScrolling(true);
+
+  }
+
   });

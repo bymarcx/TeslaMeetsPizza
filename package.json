@@ -5,7 +5,21 @@
   "main": "index.html",
   "scripts": {
     "start": "gulp",
-    "build": "gulp build --prod"
+    "build": "gulp build --prod",
+    "deploy": "deploy-to-git"
+  },
+  "config": {
+    "deployToGit": {
+        "repository": "https://github.com/bymarcx/TeslaMeetsPizza.git",
+        "branch": "staging",
+        "folder": "build",
+        "script": "npm run build",
+        "commit": "commit to staging",
+        "user": {
+            "email": "marcf.eberhard@gmail.com",
+            "name": "Marc Eberhard"
+        }
+    }
   },
   "author": "Marc Eberhard",
   "license": "ISC",
@@ -16,6 +30,7 @@
     "autoprefixer": "^9.8.6",
     "babel-loader": "^8.2.1",
     "del": "^5.1.0",
+    "deploy-to-git": "^0.1.5",
     "gulp": "^4.0.2",
     "gulp-clean-css": "^4.3.0",
     "gulp-if": "^3.0.0",

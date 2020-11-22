@@ -5,6 +5,66 @@ html,body {
     font-family: 'GothamAlt' !important;
 }
 
+@mixin fade-in($waitTime) {
+    animation: 
+        slide-up #{$waitTime},
+        fade-in 4s #{$waitTime};
+}
+
+.sec1.active .slide-up-1 {
+    opacity: 1;
+    @include fade-in('1s');
+}
+
+.sec1.active .slide-up-2 {
+    opacity: 1;
+    @include fade-in('1.3s');
+}
+
+.sec1.active .slide-up-3 {
+    opacity: 1;
+    @include fade-in('1.5s');
+}
+
+.sec1.active .slide-up-4 {
+    opacity: 1;
+    @include fade-in('2s');
+}
+
+.slide-up-1, .slide-up-2, .slide-up-3, .slide-up-4 {
+    position: relative;
+}
+
+@keyframes slide-up {
+    0% {top: 50px; opacity: 0;}
+    60% {top: 50px; opacity: 0;}
+    100% {top: 0px; opacity: 1;}
+  }
+
+  @keyframes slide-down {
+    0% {top: 0px; opacity: 1;}
+    100% {top: 50px; opacity: 0;}
+  }
+
+// .delay-1 {
+//     animation-delay: 1s;
+// }
+// .delay-2 {
+//     animation-delay: 1.7s;
+// }
+// .delay-3 {
+//     animation-delay: 2.3s;
+// }
+// .delay-4 {
+//     animation-delay: 3.0s;
+// }
+
+.section {    
+    .fp-tableCell {
+        vertical-align: top;
+    }
+}
+
 #logo {
     position: fixed;
     top:20px;
@@ -14,172 +74,59 @@ html,body {
 
     svg text {
         fill: black;
-        transition: .2s fill ease;
+        transition: .3s fill ease;
     }
 }
 
 
 .btn.btn-primary {
     color: black;
-    border: 5px solid black;
+    border: 3px solid black;
     border-radius: 100px;
     background-color: unset;
-    padding: 10px 35px;
+    padding: 7px 30px;
     text-transform: uppercase;
+    width:100%;
+    font-size: 12px;
+    margin-top: 15px;
 
     &:hover, &:focus, &:active {
         background-color: black;
-        border: 5px solid black;
+        border-color: black;
         color: $light;
     }
+
+    @include media-breakpoint-up(md) {
+        font-size: 14px;
+        width: unset;
+   }
 
 }
 
 .btn.btn-secondary {
     color: black;
-    border: 5px solid black;
+    border: 3px solid black;
     border-radius: 100%;
     background-color: unset;
     padding: 10px;
-    width: 50px;
-    height:50px;
+    width: 40px;
+    height:40px;
     text-transform: uppercase;
     font-weight: bolder;
 
     &:hover, &:focus, &:active {
         background-color: black;
-        border: 5px solid black;
+        border-color: black;
         color: $light;
     }
-
 }
 
 
-#stage {
-    background-image: url("../img/placeholder.png");
-    background-position: center;
-
-    h1#headline {
-        text-align:center;
-        margin-top: 5%;
-        font-size: 50px;
-        font-weight: 600;
-        color: white;
-    }
-
-    .facts {
-        position: absolute;
-        left: 50%;
-        transform: translate(-50%);
-        bottom: 10%;
-        
-        .col-3 {
-            padding: 0px 0 5px;
-
-            &:first-of-type, &:nth-of-type(2) {
-                border-right: 3px solid $light;
-            }
-
-            .btn.btn-primary {
-                color: white;
-                border-color: white;
-                position: relative;
-                top: 50%;
-                transform: translate(0, -50%);
-            }
-        }
-
-        .fact {
-            text-align: center;
-            color: $light;
-
-            &.big {
-                font-size: 35px;
-                font-weight: bolder;
-                margin-bottom: 5px;
-            }
-            &.small {
-                font-size: 16px;
-            }
-
-        }
-
-    }
-
-} // #stage
-
-
-// *** HEADLINES ***
-
-
-#sec1 {
-    position: relative;
-
-    .cta {
-        position: absolute;
-        bottom: 20px;
-        display: flex;
-
-        .btn.btn-primary {
-            justify-self: flex-end;
-        }
-
-        .btn.btn-secondary {
-            margin-right: 10px;
-        }
-
-    }
-
-    .col--1 {
-        padding: 60px 50px 50px;
-
-        p {
-            margin: 20px 40px 20px 0;
-        }
-
-        .starbox {
-            margin-top: 40px;
-            width: 100%;
-            padding: 30px 20px;
-            border-radius: 30px;
-            background-color: $gray-200;
-            
-            h4 {
-                font-weight: bolder;
-                font-size: 21px;
-                text-align: center;
-                line-height: 30px;
-                margin-bottom: 20px;
-            }
-
-            p {
-                font-weight: bolder;
-                font-size: 16px;
-                margin: 5px 0 10px;
-                color: black;
-
-                &.star {
-                    font-size: 18px;
-                    justify-self: end;
-                    text-align: right;
-                }
-            }
-
-        }
-
-    }
-
-    .col--2 {
-        background: grey;
-        height: 100vh;
-    }
+#sec3 {
+    background: black;
 }
 
-.section {
-    border: 1px solid red;
-    
-    .fp-tableCell {
-        vertical-align: top;
-    }
-
+#sec4 {
+    background: black;
 }
+

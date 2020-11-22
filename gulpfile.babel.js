@@ -58,6 +58,9 @@ export const copySrcFiles = () => {
 // *** DELETE OUR DIST FOLDER *** //
 export const cleanDist = () => del(['dist']);
 
+// *** DELETE OUR BUILD FOLDER *** //
+export const cleanBuild = () => del(['build']);
+
 // *** WATCH FOR CHANGES IN OUR SCSS OR JS FOLDER *** //
 export const watchForChanges = () => {
     watch('src/scss/**/*.scss', CompressStyles);
@@ -78,11 +81,12 @@ export const compress = () => {
         "!package.json",
         "!package-lock.json",
     ])
-        .pipe(zip(`${info.name}.zip`))
-        .pipe(dest('bundled'));
+        //.pipe(zip(`${info.name}.zip`))
+        .pipe(dest('build'));
 };
+
 
 // *** TIME TO RUN EVERYTHING *** //
 export const dev = series(cleanDist, parallel(CompressStyles, copySrcFiles, BundleScripts), watchForChanges)
-export const build = series(cleanDist, parallel(CompressStyles, copySrcFiles, BundleScripts), compress)
+export const build = series(cleanBuild, cleanDist, parallel(CompressStyles, copySrcFiles, BundleScripts), compress)
 export default dev;

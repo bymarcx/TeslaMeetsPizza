@@ -5,39 +5,25 @@
   "main": "index.html",
   "scripts": {
     "start": "gulp",
-    "build": "gulp build --prod",
-    "deploy": "deploy-to-git"
-  },
-  "config": {
-    "deployToGit": {
-        "repository": "https://github.com/bymarcx/TeslaMeetsPizza.git",
-        "branch": "staging",
-        "folder": "build",
-        "script": "npm run build",
-        "commit": "commit to staging",
-        "user": {
-            "email": "marcf.eberhard@gmail.com",
-            "name": "Marc Eberhard"
-        }
-    }
+    "build": "gulp build --prod"
   },
   "author": "Marc Eberhard",
   "license": "ISC",
   "devDependencies": {
-    "@babel/core": "^7.11.1",
-    "@babel/preset-env": "^7.11.0",
+    "@babel/core": "^7.12.7",
+    "@babel/preset-env": "^7.12.7",
     "@babel/register": "^7.10.5",
     "autoprefixer": "^9.8.6",
     "babel-loader": "^8.2.1",
     "del": "^5.1.0",
-    "deploy-to-git": "^0.1.5",
     "gulp": "^4.0.2",
     "gulp-clean-css": "^4.3.0",
     "gulp-if": "^3.0.0",
+    "gulp-js-import": "^1.0.6",
     "gulp-postcss": "^8.0.0",
     "gulp-replace": "^1.0.0",
     "gulp-sass": "^4.1.0",
-    "gulp-zip": "^5.0.2",
+    "gulp-uglify": "^3.0.2",
     "vinyl-named": "^1.1.0",
     "webpack-stream": "^5.2.1",
     "yargs": "^15.4.1"

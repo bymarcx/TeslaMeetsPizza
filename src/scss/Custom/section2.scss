@@ -1,21 +1,54 @@
 #sec2 {
     .top {
-        height: 70vh;
+        height: 65vh;
         background-image: url("../img/placeholder.png");
         background-size: cover;
         background-position: center;
+
+        .facts {
+            position: relative;
+            top: 45vh;
+
+            .fact {
+                text-align: left;
+                padding: 0px 25px;
+            }
+
+            .col-4 {
+                padding: 0px 0 5px;
+    
+                &:first-of-type, &:nth-of-type(2) {
+                    border-right: 3px solid $light;
+                }
+            }
+
+
+        }
+
+
     }
 
     .bottom {
-        height: 30vh;
+        
+        height: auto;
+        padding: 30px 0;
         display: flex;
 
-        .container {
-            align-self: center;
+        @include media-breakpoint-up(lg) {
+            height: 35vh;
+        }
+        
+        .col-md-4 {
+            padding-bottom: 20px;
+        }
+
+        .container-lg {
+            align-self: left;
         }
 
         .btn.btn-primary {
             margin-top: 10px;
         }
     }
+
 }

@@ -48,13 +48,19 @@
             }
         }
 
-        .col-md-3 {
+        .col-4 {
             padding: 0px 0 5px;
 
             &:first-of-type, &:nth-of-type(2) {
                 border-right: 3px solid $light;
             }
+        }
+            
+        
 
+        .col-12 {
+            text-align:center;
+            
             .btn.btn-primary {
                 color: white;
                 border-color: white;
@@ -63,42 +69,6 @@
                 transform: translate(0, -50%);
             }
         }
-
-        .col-12 {
-            text-align:center;
-        }
-
-        .fact {
-            text-align: center;
-            color: $light;
-
-            &.big {
-                font-size: 23px;
-                font-weight: bolder;
-                margin-bottom: 5px;
-
-                span {
-                    font-size: 16px;
-                }
-
-                @include media-breakpoint-up(lg) {
-                    font-size: 35px;
-
-                    span {
-                        font-size: 18px;
-                    }
-                }
-
-            }
-            &.small {
-                font-size: 11px;
-
-                @include media-breakpoint-up(lg) {
-                    font-size: 14px;
-                }
-            }
-
-        } // .fact
 
         .btn.btn-primary {
             width:100%;

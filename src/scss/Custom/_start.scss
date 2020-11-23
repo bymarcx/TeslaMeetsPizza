@@ -5,33 +5,64 @@ html,body {
     font-family: 'GothamAlt' !important;
 }
 
-@mixin fade-in($waitTime) {
+@mixin slide-in($waitTime) {
     animation: 
         slide-up #{$waitTime},
+        slide-in 4s #{$waitTime};
+}
+
+
+@mixin fade-in($waitTime) {
+    animation: 
+        fade-up #{$waitTime},
         fade-in 4s #{$waitTime};
 }
 
-.sec1.active .slide-up-1 {
+
+.section.active .slide-up-1 {
+    opacity: 1;
+    @include slide-in('1s');
+}
+
+.section.active .slide-up-2{
+    opacity: 1;
+    @include slide-in('1.3s');
+}
+
+.section.active .slide-up-3 {
+    opacity: 1;
+    @include slide-in('1.5s');
+}
+
+.section.active .slide-up-4 {
+    opacity: 1;
+    @include slide-in('2s');
+}
+
+
+
+.section.active .fade-in-1 {
     opacity: 1;
     @include fade-in('1s');
 }
 
-.sec1.active .slide-up-2 {
-    opacity: 1;
-    @include fade-in('1.3s');
-}
-
-.sec1.active .slide-up-3 {
+.section.active .fade-in-2{
     opacity: 1;
     @include fade-in('1.5s');
 }
 
-.sec1.active .slide-up-4 {
+.section.active .fade-in-3 {
     opacity: 1;
-    @include fade-in('2s');
+    @include fade-in('1.9s');
 }
 
-.slide-up-1, .slide-up-2, .slide-up-3, .slide-up-4 {
+.section.active .fade-in-4 {
+    opacity: 1;
+    @include fade-in('2.3s');
+}
+
+.slide-up-1, .slide-up-2, .slide-up-3, .slide-up-4,
+.fade-in-1, .fade-in-2, .fade-in-3, .fade-in-4 {
     position: relative;
 }
 
@@ -44,6 +75,13 @@ html,body {
   @keyframes slide-down {
     0% {top: 0px; opacity: 1;}
     100% {top: 50px; opacity: 0;}
+  }
+
+
+  @keyframes fade-up {
+    0% {opacity: 0;}
+    60% {opacity: 0;}
+    100% {opacity: 1;}
   }
 
 // .delay-1 {
@@ -59,24 +97,118 @@ html,body {
 //     animation-delay: 3.0s;
 // }
 
+
+
+.fact {
+    text-align: center;
+    color: $light;
+
+    &.big {
+        font-size: 23px;
+        font-weight: bolder;
+        margin-bottom: 5px;
+
+        span {
+            font-size: 16px;
+        }
+
+        @include media-breakpoint-up(lg) {
+            font-size: 35px;
+
+            span {
+                font-size: 18px;
+            }
+        }
+
+    }
+    &.small {
+        font-size: 11px;
+
+        @include media-breakpoint-up(lg) {
+            font-size: 14px;
+        }
+    }
+
+} // .fact
+
+
+
 .section {    
     .fp-tableCell {
         vertical-align: top;
     }
 }
 
-#logo {
-    position: fixed;
-    top:20px;
-    left: 20px;
-    display: block;
-    z-index: 9999;
+@include media-breakpoint-down(lg) {
+    #header {
+        position: fixed;
+        background: #fff;
+        height: auto;
+        width: 100%;
+        z-index: 9999;
+        
+        transition: all 0.5s ease-in;
 
-    svg text {
-        fill: black;
-        transition: .3s fill ease;
+        #logo {
+            position: relative;
+            top:10px;
+            left: 10px;
+            display: block;
+            
+
+            svg text {
+                fill: black;
+            }
+
+        }
+
+        #buttons {
+            display: flex;
+            justify-content: center;
+        }
+
+        .btn.btn-primary:first-of-type {
+            width: unset;
+            background: black;
+            color: white;
+            font-size: 10px;
+            padding: 4px 24px;
+            margin: 30px 5px 10px;
+        }
+
+        .btn.btn-primary:nth-of-type(2) {
+            width: unset;
+            background: white;
+            color: black;
+            font-size: 10px;
+            padding: 4px 24px;
+            margin: 30px 5px 10px;
+        }
+
     }
 }
+
+@include media-breakpoint-up(lg) {
+    #buttons {
+        display: none;
+    }
+
+    #logo {
+        position: fixed;
+        top:20px;
+        left: 20px;
+        display: block;
+        z-index: 9999;
+
+        svg text {
+            fill: black;
+            transition: .3s fill ease;
+        }
+    }
+
+}
+
+
 
 
 .btn.btn-primary {
@@ -88,7 +220,6 @@ html,body {
     text-transform: uppercase;
     width:100%;
     font-size: 12px;
-    margin-top: 15px;
 
     &:hover, &:focus, &:active {
         background-color: black;
@@ -105,16 +236,32 @@ html,body {
 
 .btn.btn-secondary {
     color: black;
-    border: 3px solid black;
-    border-radius: 100%;
     background-color: unset;
-    padding: 10px;
-    width: 40px;
-    height:40px;
-    text-transform: uppercase;
-    font-weight: bolder;
+    border: none;
+    font-size: 12px;
+    margin: 0;
+    padding:0;
 
-    &:hover, &:focus, &:active {
+    .label {
+        position: relative;
+        bottom: 5px;
+    }
+
+    .button {
+        color: black;
+        border: 3px solid black;
+        border-radius: 40px;
+        background-color: unset;
+        padding: 5px 10px;
+        width: 40px;
+        height:40px;
+        text-transform: uppercase;
+        font-weight: bolder;
+        margin-right: 10px;
+        font-size: 28px;
+    }
+
+    &:hover .button, &:focus, &:active {
         background-color: black;
         border-color: black;
         color: $light;

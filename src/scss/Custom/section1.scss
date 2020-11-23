@@ -10,7 +10,7 @@
 
         @include media-breakpoint-up(lg) {
             position: absolute;
-            bottom: 20px;
+            bottom: 7vh;
             display: flex;
         }
 
@@ -43,12 +43,13 @@
 
         @include media-breakpoint-up(sm) {
             padding: 60px 50px 50px;
-        }
 
-        h3 {
-            padding-right: 120px;
+            h3 {
+                padding-right: 120px;
+            }
+    
         }
-
+        
         p {
             margin: 20px 40px 20px 0;
         } 
@@ -148,5 +149,102 @@
         }
 
     }
+
+
+    &.active .annots .annot-text {
+        span {
+            transition: .3s opacity ease-in 1.3s;
+            opacity: 1 !important;
+        }
+        
+        &:before {
+            transition: .4s all ease-in 1s;
+            transform: scaleY(1) !important;
+            content: "";
+        }
+
+        &:after {
+            transition: .1s opacity ease-in 1.3s;
+            opacity: 1 !important;
+        }
+    }
+
+    .annots {
+
+        .annot-first, .annot-second, .annot-third {
+            position: absolute;
+            
+
+            .annot-text {
+
+                span {
+                    opacity: 0;
+                }
+
+                &:before {
+                    height: 30vh;
+                    width: 3px;
+                    background: black;
+                    content: "";
+                    display: block;
+                    position: relative;
+                    top: 30vh;
+                    left: -10px;
+                    z-index: 9999999;
+                    transform: scaleY(0);
+
+                }
+
+                &:after {
+                    width: 10px;
+                    height: 10px;
+                    background: white;
+                    border: 3px solid black;
+                    border-radius: 15px;
+                    content: "";
+                    display: block;
+                    position: relative;
+                    top: calc(30vh - 30px);
+                    left: -13.5px;
+                    z-index: 9999999;
+
+                    opacity: 0;
+                }
+            }
+
+            .annot-text.down {
+                &:before {
+                    top: 5vh;
+                    left: -10px;
+                }
+
+                &:after {
+                    top: calc(-30vh + 5px);
+                    left: -13.5px;
+                }
+            }
+
+        }
+
+
+        .annot-first {
+            left: 30%;
+            top:-10%;
+        }
+
+        .annot-second {
+            left: 50%;
+            top: 60%;
+        }
+
+        .annot-third {
+            left: 70%;
+            top: -20%;
+        }
+
+
+    }
+
+
 
 }

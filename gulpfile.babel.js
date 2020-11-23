@@ -1,4 +1,5 @@
 import { src, dest, watch, series, parallel } from 'gulp';
+import gulp from 'gulp';
 import yargs from 'yargs';
 import sass from 'gulp-sass';
 import cleanCss from 'gulp-clean-css';
@@ -7,10 +8,9 @@ import del from 'del';
 import webpack from 'webpack-stream';
 import postcss from 'gulp-postcss';
 import autoprefixer from 'autoprefixer';
-import zip from "gulp-zip";
 import info from "./package.json";
-import replace from "gulp-replace";
-import named from 'vinyl-named';
+
+import uglify from 'gulp-uglify';
 
 const PRODUCTION = yargs.argv.prod;
 
@@ -25,28 +25,27 @@ export const CompressStyles = () => {
 
 // *** BUNDLE OUR SCRIPTS *** //
 export const BundleScripts = () => {
-    return src(['src/js/FooterJS/bundleFooter.js', 'src/js/HeaderJS/bundleHeader.js'])
-        .pipe(named())
-        .pipe(webpack({
-            module: {
-                rules: [
-                    {
-                        test: /\.js$/,
-                        use: {
-                            loader: 'babel-loader',
-                            options: {
-                                presets: ['@babel/preset-env']
-                            }
-                        }
-                    }
-                ]
-            },
-            mode: PRODUCTION ? 'production' : 'development',
-            output: {
-                filename: '[name].js'
-            },
-        }))
-        .pipe(dest('dist/js'));
+    return src('src/js/FooterJS/bundleFooter.js')
+  .pipe(webpack({
+    module: {
+      rules: [
+        {
+          test: /\.js$/,
+          use: {
+            loader: 'babel-loader',
+            options: {
+              presets: []
+            }
+          }
+        }
+      ]
+    },
+    mode: PRODUCTION ? 'production' : 'development',
+    output: {
+      filename: 'bundleFooter.js'
+    },
+  }))
+  .pipe(dest('dist/js'));
 }
 
 // *** COPY OUR SOURCE FILES WHICH ARE NOT SCSS OR JS  *** //

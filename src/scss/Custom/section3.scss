@@ -1,0 +1,44 @@
+.sec3 {
+    padding-top: 100px;
+
+    h2 {
+        color: white;
+        font-size: 26px;
+        font-weight: bolder;
+    
+        span {
+            font-size: 26px;
+            opacity: .6;
+            font-weight: 100;
+        }
+    }    
+
+    .data {
+        color: white;
+        padding-top: 20px;
+
+        &:before {
+            content: "";
+            margin-top: 16px;
+            margin-bottom: 5px;
+            display: block;
+            width: 30px;
+            height: 1px;
+            opacity: .5;
+            background: white;
+        }
+
+        .big {
+            font-size: 14px;
+            font-weight: bolder;
+        }
+
+        .small {
+            font-size: 14px;
+            opacity: .7;
+        }
+
+    }
+
+
+}

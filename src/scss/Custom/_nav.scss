@@ -6,7 +6,7 @@
     .fp-sr-only {
         background: red;
         height: 60px;
-        width: 3px;
+        width: 3.5px;
     }
 }
 
@@ -24,10 +24,21 @@
     opacity: 1;
 }
 
+.fp-viewing-0 {
+    #top {
+        opacity: 1;
+        border: 1px solid red;
+    }
+}
+
 .fp-viewing-0, .fp-viewing-3, .fp-viewing-4 {
 
-    #logo text {
+    #logo path {
         fill: white;
+    }
+
+    #top {
+        border-color: white;
     }
 
     #fp-nav ul li a.active span, #fp-nav ul li:hover a.active span {
@@ -61,7 +72,7 @@
     border-radius: unset !important;
     background: black;
     height: 30px;
-    width: 3px;
+    width: 3.5px;
 
     transition: all .3s ease-in-out;
 }

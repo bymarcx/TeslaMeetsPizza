@@ -10,18 +10,33 @@
 
 
 
-h2 {
+
+@mixin h2 {
     font-size: 16px;
     margin-bottom: 0px;
     font-weight: lighter;
     color: $gray-600;
 }
 
-h3 {
+@mixin h3 {
     font-size: 30px;
     line-height: 42px;
     font-weight: bolder;
+
+     @include media-breakpoint-down(md) {
+        font-size: 26px;
+        line-height: 36px;
+    }
 }
+
+h3 {
+    @include h3;
+}
+
+h2 {
+    @include h2;
+}
+
 
 p {
     font-size: 14px;

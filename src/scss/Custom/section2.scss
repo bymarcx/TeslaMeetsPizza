@@ -1,24 +1,36 @@
 #sec2 {
     .top {
         height: 65vh;
-        background-image: url("../img/placeholder.png");
+        background-image: url("../img/performance.jpg");
         background-size: cover;
-        background-position: center;
+        background-position: 50% 30%;
+        display: flex;
+
 
         .facts {
             position: relative;
-            top: 45vh;
 
             .fact {
                 text-align: left;
-                padding: 0px 25px;
+                
             }
 
-            .col-4 {
-                padding: 0px 0 5px;
-    
-                &:first-of-type, &:nth-of-type(2) {
-                    border-right: 3px solid $light;
+            .row {
+                height: 100%;
+                align-content: center;
+            }
+
+            .row--1 {                
+                padding: 0px 25px;
+
+                &:first-of-type:after, &:nth-of-type(2):after {
+                    content: "";
+                    width: 50px;
+                    height: 1px;
+                    background: white;
+                    display: block;
+                    margin-top: 30px;
+                    margin-bottom: 30px;
                 }
             }
 
@@ -39,15 +51,20 @@
         }
         
         .col-md-4 {
-            padding-bottom: 20px;
+            // padding-bottom: 20px;
         }
 
         .container-lg {
-            align-self: left;
+            display: flex;
+            align-items: center;
         }
 
         .btn.btn-primary {
             margin-top: 10px;
+
+            @include media-breakpoint-down(lg) {
+                margin-bottom: 30px;
+            }
         }
     }
 

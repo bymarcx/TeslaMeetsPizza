@@ -1,5 +1,5 @@
 #stage {
-    background-image: url("../img/placeholder.png");
+    background-image: url("../img/stage1.jpg");
     background-size: cover;
     background-position: center;
 
@@ -17,14 +17,14 @@
 
     h1#headline {
         text-align:center;
-        font-size: 20px;
+        font-size: 30px;
         font-weight: 600;
         color: white;
-        padding-top: 20%;
+        padding-top: 15%;
 
         @include media-breakpoint-up(lg) {
             font-size: 40px;
-            padding-top: 5%;
+            padding-top: 10%;
         }    
 
     }
@@ -33,9 +33,13 @@
         position: absolute;
         left: 50%;
         transform: translate(-50%);
-        bottom: 10%;
+        bottom: 50px;
         padding:30px;
         
+        @include media-breakpoint-up(lg) {
+            bottom: 10%;
+        }
+
         @include media-breakpoint-up(xl) {
             .col-md-8 {
                 padding: 0 80px;
@@ -51,13 +55,17 @@
         .col-4 {
             padding: 0px 0 5px;
 
+            .fact {
+                color: white;
+            }
+            
+
+
             &:first-of-type, &:nth-of-type(2) {
-                border-right: 3px solid $light;
+                border-right: 1px solid white;
             }
         }
             
-        
-
         .col-12 {
             text-align:center;
             
@@ -67,11 +75,20 @@
                 position: relative;
                 top: 50%;
                 transform: translate(0, -50%);
+
+                &:hover {
+                    border-color: white;
+                    background: white;
+                    color: black;
+                }
+
             }
         }
 
         .btn.btn-primary {
             width:100%;
+
+            margin-top: 10px;
         
             @media screen and (min-width: 440px) {
                 width: 410px;
@@ -79,6 +96,7 @@
         
             @include media-breakpoint-up(md) {
                 width: unset;
+                margin-top: 0;
            }
         
         }

@@ -12,6 +12,15 @@ import 'bootstrap';
 
 console.log("TESTING");
 
+// refresh page on browser resize
+// initalizing fullpage new on every resize
+// FULLPAGE: "mimimimi" 
+$(window).bind('resize', function(e)
+{
+  console.log('window resized..');
+  this.location.reload(false); /* false to get page from cache */
+});
+
 
 $(document).ready(function() {
 
@@ -26,6 +35,8 @@ $(document).ready(function() {
         scrollHorizontally: false,
         css3: true,
         
+        showActiveTooltip: true,
+        lockAnchors: true,
         navigation: true,
         navigationPosition: 'left',
         navigationTooltips: ['Model 3', 'Geschmack', 'Performance', 'Technische Daten', 'Kaufen'],
@@ -62,37 +73,70 @@ $(document).ready(function() {
 
 $(document).ready(function () {
 
-    $('#los').click(function(){
+    $('#losd').click(function(){
 
         if(!$("#collapseExample").hasClass('show')){
 
-            setTimeout(function() {
-                fullpage_api.reBuild();
-                //fullpage_api.moveTo(2);
-                $.fn.fullpage.setAllowScrolling(false);
-                
-            }, 100);
-            
-            if (document.querySelector('#fp-nav') !== null) {
-                document.querySelector('#fp-nav').classList.add('big');
-            }
+            document.getElementById("stage").style.display = "none";
+            document.getElementById("sec2").style.display = "none";
+            document.getElementById("sec3").style.display = "none";
+            document.getElementById("sec4").style.display = "none";
+
+            document.querySelector('#sec1').classList.add('fp-normal-scroll');
+            document.querySelector('#sec1').classList.add('fp-scrollable');
+
+            $.fn.fullpage.setResponsive(true)
 
             // setTimeout(function() {
-            //     scrollToElement(collapseExample);
+            //     $.fn.fullpage.setAllowScrolling(false);
+            //     $.fn.fullpage.reBuild();
+            //     console.log("set scrolling false;")
+            // }, 100);
+            
+            // document.getElementById("stage").style.display = "none";
+            // document.getElementById("sec2").style.display = "none";
+            // document.getElementById("sec3").style.display = "none";
+            // document.getElementById("sec4").style.display = "none";
+
+
+            // if (document.querySelector('#fp-nav') !== null) {
+            //     document.querySelector('#fp-nav').classList.add('big');
+            // }
+
+            // // setTimeout(function() {
+            // //     scrollToElement(collapseExample);
                 
-            // }, 300);
+            // // }, 300);
             
 
         }
         else {
-            setTimeout(function() {
-                fullpage_api.reBuild();                
-            }, 300);
-            $.fn.fullpage.setAllowScrolling(true);
 
-            if (document.querySelector('#fp-nav') !== null) {
-                document.querySelector('#fp-nav').classList.remove('big');
-            }
+
+            document.getElementById("stage").style.display = "table";
+            document.getElementById("sec2").style.display = "table";
+            document.getElementById("sec3").style.display = "table";
+            document.getElementById("sec4").style.display = "table";
+
+            $.fn.fullpage.setResponsive(false);
+
+            // setTimeout(function() {
+            //   $.fn.fullpage.setAllowScrolling(true);
+            //   $.fn.fullpage.reBuild();
+              
+            //   console.log("set scrolling true;")
+            // }, 300);
+
+            // $.fn.fullpage.moveTo(3);
+
+            // document.getElementById("stage").style.display = "table";
+            // document.getElementById("sec2").style.display = "table";
+            // document.getElementById("sec3").style.display = "table";
+            // document.getElementById("sec4").style.display = "table";
+
+            // if (document.querySelector('#fp-nav') !== null) {
+            //     document.querySelector('#fp-nav').classList.remove('big');
+            // }
             
         }
 
@@ -104,19 +148,26 @@ $(document).ready(function () {
 
 
 // MOBILE NAVBAR!!!
-
-/* When the user scrolls down, hide the navbar. When the user scrolls up, show the navbar */
+// When the user scrolls down, hide the navbar. When the user scrolls up, show the navbar
 var prevScrollpos = window.pageYOffset;
 window.onscroll = function() {
   var currentScrollPos = window.pageYOffset;
 
-  if(currentScrollPos <= window.innerHeight) {
+  if(currentScrollPos <= (window.innerHeight - 150) ) {
     document.getElementById("header").style.background = "unset";
     document.getElementById("buttons").style.visibility = "hidden";
+    document.getElementById("top").style.visibility = "hidden";
+
+    document.getElementById("header").style.position = "absolute";
+    document.getElementById("header").style.background = "unset";
   }
   else {
     document.getElementById("header").style.background = "white";
     document.getElementById("buttons").style.visibility = "visible";
+    document.getElementById("top").style.visibility = "visible";
+
+    document.getElementById("header").style.position = "fixed";
+    document.getElementById("header").style.background = "#fff";
 
     if (prevScrollpos > currentScrollPos) {
       document.getElementById("header").style.top = "0";

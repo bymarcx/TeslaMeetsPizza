@@ -1,15 +1,13 @@
-
 #sec1 {
     position: relative;
 
     .cta {
-
         @include media-breakpoint-down(lg) {
             margin-top: 20px;
         }
 
         p {
-            margin:0 !important;
+            margin: 0 !important;
         }
 
         @include media-breakpoint-up(lg) {
@@ -18,26 +16,26 @@
             display: flex;
         }
 
-        .btn.btn-primary, .btn.btn-secondary {
+        .btn.btn-primary,
+        .btn.btn-secondary {
             margin-top: 10px;
 
             @include media-breakpoint-up(lg) {
-                margin-top:unset;
+                margin-top: unset;
             }
         }
 
         .btn.btn-primary {
-            width:100%;
-        
+            width: 100%;
+
             @media screen and (min-width: 440px) {
                 width: unset;
             }
-        
+
             @include media-breakpoint-up(md) {
                 font-size: 14px;
                 width: unset;
-           }
-        
+            }
         }
 
         .btn.btn-primary {
@@ -47,7 +45,6 @@
         .btn.btn-secondary {
             margin-right: 10px;
         }
-
     }
 
     .col--1 {
@@ -59,12 +56,11 @@
             h3 {
                 padding-right: 120px;
             }
-    
         }
-        
+
         p {
             margin: 20px 40px 20px 0;
-        } 
+        }
 
         .starbox {
             margin-top: 40px;
@@ -88,7 +84,6 @@
                 width: 370px;
             }
 
-            
             h4 {
                 font-weight: bolder;
                 font-size: 21px;
@@ -117,20 +112,36 @@
                     }
                 }
             }
-
         }
-
     }
 
     .col--2 {
-        background: #f2f2f2;
-        height: 100vh;
-        background-image: url("../img/annots1.png");
-        background-size: contain;
-        background-position: center;
-        background-repeat: no-repeat;
+            display: flex;
+            justify-content: center;
 
-        position: relative;
+            background: #f2f2f2;
+            height: 100vh;
+            position: relative;
+
+        .annots-container {
+            background-image: url("../img/annots1.png");
+            background-size: contain;
+            background-position: center;
+            background-repeat: no-repeat;
+            position: relative;
+            border: 1px solid red;
+            align-self: center;
+            display: block;
+
+            width: 100%;
+            padding-top: 56.25%;
+
+            @include media-breakpoint-down(lg) {
+                left:50%;
+            }
+            
+        }
+
     }
 
 
@@ -138,79 +149,104 @@
         padding: 100px 0;
         background: $gray-900;
         color: $light;
-                    
 
         .row:nth-of-type(even) {
             .col-md-6:nth-of-type(2) {
-                padding-right:0px;
+                padding-right: 0px;
             }
         }
 
         .row:nth-of-type(odd) {
             .col-md-6:nth-of-type(2) {
-                padding-left:0px;
+                padding-left: 0px;
             }
         }
 
         .col-md-6 {
-        
             &:nth-of-type(odd) {
                 padding: 50px 100px;
             }
-
         }
-                   
 
         img {
             width: 100%;
             height: auto;
         }
-
     }
 
 
+
+@include media-breakpoint-up(lg) {
     &.active .annots .annot-text {
         span {
-            transition: .3s opacity ease-in 1.3s;
+            transition: 0.3s opacity ease-in 1.3s;
             opacity: 1 !important;
         }
-        
+
         &:before {
-            transition: .4s all ease-in 1s;
+            transition: 0.4s all ease-in 1s;
             transform: scaleY(1) !important;
             content: "";
         }
 
         &:after {
-            transition: .1s opacity ease-in 1.3s;
+            transition: 0.1s opacity ease-in 1.3s;
             opacity: 1 !important;
         }
     }
+}
+    
 
     .annots {
-
-        .annot-first, .annot-second, .annot-third {
+        .annot-first,
+        .annot-second,
+        .annot-third {
             position: absolute;
-            
 
             .annot-text {
+                position: absolute;
+                width: 300px;
+                height: 100%;
+
+                @include media-breakpoint-down(lg) {
+                    text-align:right;
+                    position: relative;
+                    width: 100%;
+                }
 
                 span {
+                    position: relative;
+                    width: auto;
+
                     opacity: 0;
+
+                    // background: rgba(255,255,255,0.8);
+                    // border-radius: 15px;
+                    // padding: 5px 10px;
+
+                    @include media-breakpoint-down(lg) {
+                        opacity: 1;
+                    }
                 }
 
                 &:before {
-                    height: 30vh;
                     width: 3px;
                     background: black;
                     content: "";
                     display: block;
-                    position: relative;
-                    top: 30vh;
-                    left: -10px;
+                    position: absolute;
+                    top: 0;
+                    bottom: 0;
+                    left: 10px;
                     z-index: 9999999;
                     transform: scaleY(0);
 
+                    @include media-breakpoint-down(lg) {
+                        transform: scaleY(1);
+
+                        left: unset;
+                        right: -10px;
+                    }
                 }
 
                 &:after {
@@ -221,64 +257,59 @@
                     border-radius: 15px;
                     content: "";
                     display: block;
-                    position: relative;
-                    top: calc(30vh - 30px);
+                    position: absolute;
+                    bottom: 0px;
                     left: -13.5px;
                     z-index: 9999999;
 
                     opacity: 0;
+
+                    @include media-breakpoint-down(lg) {
+                        opacity: 1;
+
+                        left: unset;
+                        right: -13.5px;
+                    }
                 }
             }
+
 
             .annot-text.down {
                 &:before {
-                    top: 5vh;
-                    left: -10px;
+                    // Nothing to change here!
+                }
+
+                span {
+                    position: absolute;
+                    bottom: 0px;
                 }
 
                 &:after {
-                    top: calc(-30vh + 5px);
-                    left: -13.5px;
+                    top: 0px;
+                    bottom: unset;
                 }
             }
-
         }
-
 
         .annot-first {
             left: 30%;
-            top:-20%;
+            top: 8%;
+
+            height: 40%;
         }
 
         .annot-second {
-            left: 50%;
-            top: 60%;
+            left: 45%;
+            top: 65%;
 
+            height: 30%;
         }
 
         .annot-third {
-            left: 60%;
-            top: 5%;
+            left: 62%;
+            top: 10%;
 
-            .annot-text {
-                &:before {
-                    height: 20vh;
-                    width: 3px;
-                    top: 20vh;
-                    left: -10px;
-                }
-
-                &:after {
-                    top: calc(20vh - 30px);
-                    left: -13.5px;
-                }
-            }
-
+            height: 50%;
         }
-
-
     }
-
-
-
 }

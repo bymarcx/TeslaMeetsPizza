@@ -3,6 +3,7 @@
 
 html,body {
     font-family: 'GothamAlt' !important;
+    overflow-x: hidden !important;
 }
 
 @mixin slide-in($waitTime) {
@@ -16,6 +17,12 @@ html,body {
     animation: 
         fade-up #{$waitTime},
         fade-in 4s #{$waitTime};
+}
+
+@mixin fade-in-long($waitTime) {
+    animation: 
+        fade-up 1s,
+        fade-in 6s 1s;
 }
 
 
@@ -44,6 +51,11 @@ html,body {
 .section.active .fade-in-1 {
     opacity: 1;
     @include fade-in('1s');
+}
+
+.section.active .fade-in-long-1 {
+    opacity: 1;
+    @include fade-in-long('1s');
 }
 
 .section.active .fade-in-2{
@@ -134,6 +146,11 @@ html,body {
 
 
 .section {    
+    @include media-breakpoint-up(lg) {
+        height: 100vh;
+    }
+    
+    
     .fp-tableCell {
         vertical-align: top;
     }

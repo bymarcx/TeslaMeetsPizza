@@ -3,15 +3,17 @@ $(document).ready(function() {
   // It's only fullpage on desktop!
   if($(window).width() > 992) {
 
-    $('#fullpage').fullpage({
-      //options here
+    // initalizing fullpage.js / Letz fetz!
+    var fullPageInstance = new fullpage('#fullpage', {
+
+      // options here
       scrollBar: true,
       autoScrolling:true,
-      scrollOverflow:true,
+      //scrollOverflow:true,
       scrollHorizontally: false,
       css3: true,
-      normalScrollElements: '',
-      
+      //showActiveTooltip: true,
+      lockAnchors: true,
       navigation: true,
       navigationPosition: 'left',
       navigationTooltips: ['Model 3', 'Geschmack', 'Performance', 'Technische Daten', 'Kaufen'],
@@ -21,14 +23,14 @@ $(document).ready(function() {
 
         // using destination index to change logo color.
         if(destination.index == 0){
-          document.getElementById("textlogo").style.fill="white";
+          //document.getElementById("textlogo").style.fill="white";
         }
         if(destination.index == 1){
-          document.getElementById("textlogo").style.fill="black";
+          //document.getElementById("textlogo").style.fill="black";
           $(".fade").fadeIn();
         }
         if(destination.index == 2){
-          document.getElementById("textlogo").style.fill="white";
+          //document.getElementById("textlogo").style.fill="white";
         }
 
       } 
@@ -41,3 +43,4 @@ $(document).ready(function() {
   }
 
   });
+

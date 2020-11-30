@@ -5,67 +5,72 @@ window.$ = $;
 import 'popper.js';
 import 'bootstrap';
 
-// fullpage and webpack is somehow now working together. :/
+import fullpage from 'fullpage.js';
 
-//import './Custom/collapse_sec.js'
-//import './Custom/init-fp.js'
+
+require("./Custom/custom");
+//require("./Custom/init-fp");
 
 console.log("TESTING");
 
 // refresh page on browser resize
 // initalizing fullpage new on every resize
 // FULLPAGE: "mimimimi" 
-$(window).bind('resize', function(e)
-{
-  console.log('window resized..');
-  this.location.reload(false); /* false to get page from cache */
-});
+// $(window).bind('resize', function(e)
+// {
+//   console.log('window resized..');
+//   this.location.reload(false); /* false to get page from cache */
+// });
+
+
 
 
 $(document).ready(function() {
 
-    // It's only fullpage on desktop!
-    if($(window).width() > 992) {
-  
-      $('#fullpage').fullpage({
-        //options here
-        scrollBar: true,
-        autoScrolling:true,
-        scrollOverflow:true,
-        scrollHorizontally: false,
-        css3: true,
-        
-        showActiveTooltip: true,
-        lockAnchors: true,
-        navigation: true,
-        navigationPosition: 'left',
-        navigationTooltips: ['Model 3', 'Geschmack', 'Performance', 'Technische Daten', 'Kaufen'],
-  
-        afterLoad: function( origin, destination, direction){
-        var loadedSection = this;
-  
-          // using destination index to change logo color.
-          if(destination.index == 0){
-            //document.getElementById("textlogo").style.fill="white";
-          }
-          if(destination.index == 1){
-            //document.getElementById("textlogo").style.fill="black";
-            $(".fade").fadeIn();
-          }
-          if(destination.index == 2){
-            //document.getElementById("textlogo").style.fill="white";
-          }
-  
-        } 
-  
-      });
-  
-      //methods
-      $.fn.fullpage.setAllowScrolling(true);
-  
-    }
-  
+  // It's only fullpage on desktop!
+  if($(window).width() > 992) {
+
+    // initalizing fullpage.js / Letz fetz!
+    var fullPageInstance = new fullpage('#fullpage', {
+
+      // options here
+      scrollBar: true,
+      autoScrolling:true,
+      //scrollOverflow:true,
+      scrollHorizontally: false,
+      css3: true,
+      //showActiveTooltip: true,
+      lockAnchors: true,
+      navigation: true,
+      navigationPosition: 'left',
+      navigationTooltips: ['Model 3', 'Geschmack', 'Performance', 'Technische Daten', 'Kaufen'],
+
+      afterLoad: function( origin, destination, direction){
+      var loadedSection = this;
+
+        // using destination index to change logo color.
+        if(destination.index == 0){
+          //document.getElementById("textlogo").style.fill="white";
+        }
+        if(destination.index == 1){
+          //document.getElementById("textlogo").style.fill="black";
+          $(".fade").fadeIn();
+        }
+        if(destination.index == 2){
+          //document.getElementById("textlogo").style.fill="white";
+        }
+
+      } 
+
     });
+
+    //methods
+    $.fn.fullpage.setAllowScrolling(true);
+
+  }
+
+  });
+
 
 
 

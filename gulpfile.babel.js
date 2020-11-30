@@ -1,5 +1,4 @@
 import { src, dest, watch, series, parallel } from 'gulp';
-import gulp from 'gulp';
 import yargs from 'yargs';
 import sass from 'gulp-sass';
 import cleanCss from 'gulp-clean-css';
@@ -9,8 +8,6 @@ import webpack from 'webpack-stream';
 import postcss from 'gulp-postcss';
 import autoprefixer from 'autoprefixer';
 import info from "./package.json";
-
-import uglify from 'gulp-uglify';
 
 const PRODUCTION = yargs.argv.prod;
 
@@ -38,7 +35,7 @@ export const BundleScripts = () => {
             }
           }
         }
-      ]
+      ],
     },
     mode: PRODUCTION ? 'production' : 'development',
     output: {

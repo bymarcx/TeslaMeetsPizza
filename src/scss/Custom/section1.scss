@@ -125,10 +125,12 @@
     .col--2 {
         background: #f2f2f2;
         height: 100vh;
-        background-image: url("../img/annots.png");
+        background-image: url("../img/annots1.png");
         background-size: contain;
         background-position: center;
         background-repeat: no-repeat;
+
+        position: relative;
     }
 
 

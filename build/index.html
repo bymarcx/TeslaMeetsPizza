@@ -1,357 +1,388 @@
 <!DOCTYPE html>
 <html lang="DE">
-    <head>
-        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <!-- Bundled CSS -->
-        <link rel="stylesheet" href="./dist/css/bundle.css" type="text/css" media="all">
+<head>
 
-        <!-- Bundled Header JS -->
-        <script src="./dist/js/bundleHeader.js"></script>
+  <!-- 
+        ###############################################
+        #                                             #
+        #  (C) 2020 MARC EBERHARD                     #
+        #  ALL RIGHTS RESERVED!                       #
+        #                                             #
+        #  stag.rwd.bymarc.media                      #
+        #  Theme: Tesla Meets Pizza                   #
+        #  Version: 1.0.0                             #
+        #  E-Mail: me@bymarc.de                       #
+        #                                             #
+        ###############################################
+                                                    -->
 
-        <title>PIZZA - Model S</title>
-    </head>
-    <body>
-        <!-- HTML STARTS HERE -->
-        <div id="header">
-          <div id="logo">
-            <svg xmlns="http://www.w3.org/2000/svg" width="100" height="12" viewBox="20 0 130 22">
-              <path id="Pfad_7" data-name="Pfad 7" d="M0,0V-11.25H16.875a1.852,1.852,0,0,0,1.318-.527,1.836,1.836,0,0,0,.557-1.348V-15H0v-3.75H22.5v7.5a3.575,3.575,0,0,1-1.113,2.666A3.652,3.652,0,0,1,18.75-7.5h-15V0ZM38.25,0V-18.75H42V0Zm19.5,0,15-15H61.5a3.624,3.624,0,0,1-2.666-1.084A3.687,3.687,0,0,1,57.75-18.75h22.5v1.875L67.125-3.75H76.5a3.542,3.542,0,0,1,2.637,1.113A3.6,3.6,0,0,1,80.25,0ZM96,0l15-15H99.75a3.624,3.624,0,0,1-2.666-1.084A3.687,3.687,0,0,1,96-18.75h22.5v1.875L105.375-3.75h9.375a3.542,3.542,0,0,1,2.637,1.113A3.6,3.6,0,0,1,118.5,0Zm38.25,0V-11.25h22.5V0H153V-7.5H138V0ZM138-15a3.624,3.624,0,0,1-2.666-1.084,3.687,3.687,0,0,1-1.084-2.666h22.5a3.575,3.575,0,0,1-1.113,2.666A3.652,3.652,0,0,1,153-15Z" transform="translate(0 18.75)"/>
-            </svg>     
-            
-            <a onclick="fullpage_api.moveTo(1)" id="top"></a>
-            
-          </div>
-            <div id="buttons">
-              <a class="btn btn-primary">
-                Bestellen
-              </a> 
-              <a class="btn btn-primary">
-                Geschmackstest
-              </a> 
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- Bundled CSS -->
+  <link rel="stylesheet" href="./dist/css/bundle.css" type="text/css" media="all">
+
+  <!-- Bundled Header JS -->
+  <!-- Not used in this project! -->
+  <!-- <script src="./dist/js/bundleHeader.js"></script> -->
+
+  <title>PIZZA - Model S</title>
+</head>
+
+<body>
+  <!-- HTML STARTS HERE -->
+
+  <!-- HEADER -->
+  <div id="header">
+    <div id="logo">
+      <svg xmlns="http://www.w3.org/2000/svg" width="100" height="12" viewBox="20 0 130 22">
+        <path id="Pfad_7" data-name="Pfad 7"
+          d="M0,0V-11.25H16.875a1.852,1.852,0,0,0,1.318-.527,1.836,1.836,0,0,0,.557-1.348V-15H0v-3.75H22.5v7.5a3.575,3.575,0,0,1-1.113,2.666A3.652,3.652,0,0,1,18.75-7.5h-15V0ZM38.25,0V-18.75H42V0Zm19.5,0,15-15H61.5a3.624,3.624,0,0,1-2.666-1.084A3.687,3.687,0,0,1,57.75-18.75h22.5v1.875L67.125-3.75H76.5a3.542,3.542,0,0,1,2.637,1.113A3.6,3.6,0,0,1,80.25,0ZM96,0l15-15H99.75a3.624,3.624,0,0,1-2.666-1.084A3.687,3.687,0,0,1,96-18.75h22.5v1.875L105.375-3.75h9.375a3.542,3.542,0,0,1,2.637,1.113A3.6,3.6,0,0,1,118.5,0Zm38.25,0V-11.25h22.5V0H153V-7.5H138V0ZM138-15a3.624,3.624,0,0,1-2.666-1.084,3.687,3.687,0,0,1-1.084-2.666h22.5a3.575,3.575,0,0,1-1.113,2.666A3.652,3.652,0,0,1,153-15Z"
+          transform="translate(0 18.75)" />
+      </svg>
+
+      <a onclick="fullpage_api.moveTo(1)" id="top"></a>
+
+    </div>
+    <div id="buttons">
+      <a class="btn btn-primary">
+        Bestellen
+      </a>
+      <a class="btn btn-primary">
+        Geschmackstest
+      </a>
+    </div>
+  </div>
+
+  <main id="fullpage">
+    <!-- STAGE -->
+    <section id="stage" class="section">
+      <h1 id="headline" class="xslide-up-1">Model S</h1>
+
+      <div class="container facts">
+        <div class="row">
+          <div class="col-12 offset-md-2 col-md-8 offset-lg-0 col-lg-12">
+
+            <div class="row">
+              <div class="col-4 col-md-3 fade-in-1">
+                <div class="fact big">12 <span>min</span></div>
+                <div class="fact small">Bei 220° C <br> Ober-Unter-Hitze</div>
+              </div>
+              <div class="col-4 col-md-3 fade-in-2">
+                <div class="fact big">837 <span>kcal</span></div>
+                <div class="fact small">Energie</div>
+              </div>
+              <div class="col-4 col-md-3 fade-in-3">
+                <div class="fact big">Salami</div>
+                <div class="fact small">Rind</div>
+              </div>
+              <div class="col-12 col-md-3 fade-in-4">
+                <a class="btn btn-primary">
+                  Bestellen
+                </a>
+              </div>
+
             </div>
+
+
+          </div>
+        </div>
+      </div>
+
+    </section>
+
+    <!-- SECTION 1 -->
+    <section id="sec1" class="section sec1 fp-auto-height">
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-lg-5 col-xxl-3 col--1">
+
+            <h2 class="slide-up-1">Geschmack</h2>
+            <h3 class="slide-up-1">Gemacht für Geniesser</h3>
+            <p class="slide-up-1">Geschmack ist das wichtigste Designmerkmal der Model S. Seinen Rahmen bildet ein
+              knuspriger Boden aus leistungsstarker Hefe. Belegt wird die Model S mit den feinsten Zutaten, bestehend
+              aus frischen Tomaten, feinster Salami und bestem Käse.</p>
+
+            <div class="starbox slide-up-2">
+              <h4>5-Sterne <br>Geschmacks&shy;bewertung</h4>
+              <div class="container">
+                <div class="row">
+                  <div class="col-6">
+                    <p>Feinster Salami</p>
+                  </div>
+                  <div class="col-6">
+                    <p class="star">★ ★ ★ ★ ★</p>
+                  </div>
+                  <div class="col-6">
+                    <p>Edelster Käse</p>
+                  </div>
+                  <div class="col-6">
+                    <p class="star">★ ★ ★ ★ ★</p>
+                  </div>
+                  <div class="col-6">
+                    <p>Frische Tomaten</p>
+                  </div>
+                  <div class="col-6">
+                    <p class="star">★ ★ ★ ★ ★</p>
+                  </div>
+                  <div class="col-6">
+                    <p>Beste Kräuter</p>
+                  </div>
+                  <div class="col-6">
+                    <p class="star">★ ★ ★ ★ ★</p>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+
+            <div class="cta">
+
+              <p class="slide-up-4">
+                <a class="btn btn-secondary" id="los" data-toggle="collapse" href="#collapseExample" role="button"
+                  aria-expanded="false" aria-controls="collapseExample">
+                  <span class="button">+</span><span class="label">MEHR ERFAHREN </span>
+                </a>
+                <a class="btn btn-primary">
+                  Bestellen
+                </a>
+              </p>
+
+            </div>
+
+          </div>
+          <div class="col-lg-7 col-xxl-9 col--2">
+
+            <div class="annots-container"></div>
+
+            <div class="annots">
+              <div class="annot-first">
+                <div class="annot-text">
+                  <span>Knuspriger Rand</span>
+                </div>
+              </div>
+              <div class="annot-second">
+                <div class="annot-text down">
+                  <span>Feinste Salami</span>
+                </div>
+              </div>
+              <div class="annot-third">
+                <div class="annot-text">
+                  <span>Frische Pilze</span>
+                </div>
+              </div>
+            </div> <!-- end annots -->
+
+          </div> <!-- end annots-container -->
+
+
+        </div>
+      </div>
+      </div>
+      <div class="collapse" id="collapseExample">
+
+        <div class="container">
+          <div class="row">
+            <div class="col-md-6">
+              <h3>Frische Tomaten</h3>
+              <p>Lorem ipsum dolor sit amet mit.</p>
+            </div>
+            <div class="col-md-6">
+              <img src="dist/img/placeholder.png">
+            </div>
+          </div>
+          <div class="row flex-md-row-reverse">
+            <div class="col-md-6">
+              <h3>Frische Tomaten</h3>
+              <p>Lorem ipsum dolor sit amet, bla blie blubb lorem ipsum dorlo mit.</p>
+            </div>
+            <div class="col-md-6">
+              <img src="dist/img/placeholder.png">
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-6">
+              <h3>Frische Tomaten</h3>
+              <p>Lorem ipsum dolor sit ipsum dorlo mit.</p>
+            </div>
+            <div class="col-md-6">
+              <img src="dist/img/placeholder.png">
+            </div>
+          </div>
+          <div class="row flex-md-row-reverse">
+            <div class="col-md-6">
+              <h3>Frische Tomaten</h3>
+              <p>Lorem ipsum dolor sit amet, lorem ipsum dorlo mit.</p>
+            </div>
+            <div class="col-md-6">
+              <img src="dist/img/placeholder.png">
+            </div>
+          </div>
         </div>
 
-            <main id="fullpage">
-              <!-- STAGE -->
-                <section id="stage" class="section">
-                  <h1 id="headline" class="xslide-up-1">Model S</h1>
 
-                  <div class="container facts">
-                    <div class="row">
-                      <div class="col-12 offset-md-2 col-md-8 ">
-                        
-                        <div class="row">
-                          <div class="col-4 col-md-3 fade-in-1">
-                            <div class="fact big">12 <span>min</span></div>
-                            <div class="fact small">Bei 220° C <br> Ober-Unter-Hitze</div>
-                          </div>
-                          <div class="col-4 col-md-3 fade-in-2">
-                            <div class="fact big">837 <span>kcal</span></div>
-                            <div class="fact small">Energie</div>
-                          </div>
-                          <div class="col-4 col-md-3 fade-in-3">
-                            <div class="fact big">Salami</div>
-                            <div class="fact small">Rind</div>
-                          </div>
-                          <div class="col-12 col-md-3 fade-in-4">
-                            <a class="btn btn-primary">
-                              Bestellen
-                            </a>
-                          </div>
-
-                        </div>
+      </div>
 
 
-                      </div>
-                    </div>
-                  </div>
+    </section>
+    <!-- SECTION 2 -->
+    <section id="sec2" class="section sec2">
+      <div class="top">
+        <div class="container-fluid facts">
+          <div class="row">
+            <div class="col-12 offset-md-9 col-md-3">
 
-                </section>
+              <div class="row--1 fade-in-1">
+                <div class="fact big">12 <span>min</span></div>
+                <div class="fact small">im Backofen zuhause golbraun backen</div>
+              </div>
 
-                <!-- SECTION 1 -->
-                <section id="sec1" class="section sec1 fp-auto-height">
-                  <div class="container-fluid">
-                    <div class="row">
-                      <div class="col-lg-5 col-xxl-3 col--1" >
-                        
-                        <h2 class="slide-up-1">Geschmack</h2>
-                        <h3 class="slide-up-1">Gemacht für Geniesser</h3>
-                        <p class="slide-up-1">Geschmack ist das wichtigste Designmerkmal der Model S. Seinen Rahmen bildet ein knuspriger Boden aus leistungsstarker Hefe. Belegt wird die Model S mit den feinsten Zutaten, bestehend aus frischen Tomaten, feinster Salami und bestem Käse.</p>
+              <div class="row--1 fade-in-2">
+                <div class="fact big">200° <span>C</span></div>
+                <div class="fact small">bei der Einstellung Umluft</div>
+              </div>
 
-                        <div class="starbox slide-up-2">
-                          <h4>5-Sterne <br>Geschmacks&shy;bewertung</h4>
-                          <div class="container">
-                            <div class="row">
-                              <div class="col-6"><p>Feinster Salami</p></div>
-                              <div class="col-6"><p class="star">★ ★ ★ ★ ★</p></div>
-                              <div class="col-6"><p>Edelster Käse</p></div>
-                              <div class="col-6"><p class="star">★ ★ ★ ★ ★</p></div>
-                              <div class="col-6"><p>Frische Tomaten</p></div>
-                              <div class="col-6"><p class="star">★ ★ ★ ★ ★</p></div>
-                              <div class="col-6"><p>Beste Kräuter</p></div>
-                              <div class="col-6"><p class="star">★ ★ ★ ★ ★</p></div>
-                            </div>
-                          </div>
+              <div class="row--1 fade-in-3">
+                <div class="fact big">220° <span>C</span></div>
+                <div class="fact small">bei der Einstellung Ober-Unter-Hitze</div>
+              </div>
 
-                        </div>
+            </div>
+          </div>
+        </div>
 
-                        <div class="cta">
+      </div>
+      <div class="bottom">
 
-                          <p class="slide-up-4">
-                            <a class="btn btn-secondary" id="los" data-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample">
-                              <span class="button">+</span><span class="label">MEHR ERFAHREN </span>
-                          </a> 
-                            <a class="btn btn-primary">
-                              Bestellen
-                            </a> 
-                          </p>
-
-                        </div>
-                        
-                      </div>
-                      <div class="col-lg-7 col-xxl-9 col--2">
-                        <div class="annots">
-                          <div class="annot-first">
-                            <div class="annot-text">
-                                <span>Knuspriger Rand</span>
-                            </div>
-                          </div>
-                          <div class="annot-second">
-                            <div class="annot-text down">
-                              <span>Feinste Salami</span>
-                            </div>
-                          </div>
-                          <div class="annot-third">
-                            <div class="annot-text">
-                              <span>Frische Pilze</span>
-                            </div>
-                          </div>
-                        </div>
+        <div class="container-md">
+          <div class="row">
+            <div class="offset-0 col-12 col-md-12">
+              <div class="row">
+                <div class="col-md-4">
+                  <h2 class="slide-up-1">Performance</h2>
+                  <h3 class="slide-up-1">Höchste Art <br>der Zubereitung</h3>
+                  <a class="btn btn-primary slide-up-2">
+                    Bestellen
+                  </a>
+                </div>
+                <div class="col-md-8 slide-up-1">
+                  <p>Die Zubereitung der Model S ist ein wichtiger Punkt. Die Model S kümmert sich voll automatisch
+                    um die selbstständige Zubereitung in einem Backofen ihrer Wahl.
+                    <br>Einfach in dem vorgeheizten Backofen bei 200° C Umluft oder 220° C Ober-Unter-Hitze für genau 12
+                    min backen.</p>
+                </div>
+              </div>
 
 
-                      </div>
-                    </div>
-                  </div>
+            </div>
+          </div>
+        </div>
 
-                
-                  <div class="collapse" id="collapseExample">
+      </div> <!-- end bottom -->
 
-                    <div class="container">
-                      <div class="row">
-                        <div class="col-md-6"> 
-                          <h3>Frische Tomaten</h3>
-                          <p>Lorem ipsum dolor sit amet mit.</p>
-                        </div>
-                        <div class="col-md-6"> 
-                          <img src="dist/img/placeholder.png"> 
-                        </div>
-                      </div>
-                      <div class="row flex-md-row-reverse">
-                        <div class="col-md-6"> 
-                          <h3>Frische Tomaten</h3>
-                          <p>Lorem ipsum dolor sit amet, bla blie blubb lorem ipsum dorlo mit.</p>
-                         </div>
-                        <div class="col-md-6"> 
-                          <img src="dist/img/placeholder.png"> 
-                        </div>
-                      </div>
-                      <div class="row">
-                        <div class="col-md-6"> 
-                          <h3>Frische Tomaten</h3>
-                          <p>Lorem ipsum dolor sit ipsum dorlo mit.</p>
-                        </div>
-                        <div class="col-md-6"> 
-                          <img src="dist/img/placeholder.png"> 
-                        </div>
-                      </div>
-                      <div class="row flex-md-row-reverse">
-                        <div class="col-md-6"> 
-                          <h3>Frische Tomaten</h3>
-                          <p>Lorem ipsum dolor sit amet, lorem ipsum dorlo mit.</p>
-                        </div>
-                        <div class="col-md-6"> 
-                          <img src="dist/img/placeholder.png">  
-                        </div>
-                      </div>
-                    </div>
+      </div>
+      </div>
+    </section>
+    <!-- SECTION 3 -->
+    <section id="sec3" class="section sec3">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-6 col--1 fade-in-long-1">
+            <img src="dist/img/Pizzaschatel.png">
+          </div>
+          <div class="col-md-6 datas slide-up-3">
+            <h2>Model S <span>Wichtige Daten</span></h2>
+            <div class="row">
+              <div class="col-6 col-xl-4">
+                <div class="data">
+                  <div class="big">Energie</div>
+                  <div class="small">837 kcal</div>
+                </div>
+                <div class="data">
+                  <div class="big">Kohlenhydrate</div>
+                  <div class="small">106,2 g</div>
+                </div>
+                <div class="data">
+                  <div class="big">Eiweiß</div>
+                  <div class="small">28,1 g</div>
+                </div>
+                <div class="data">
+                  <div class="big">Fett</div>
+                  <div class="small">31,7 g</div>
+                </div>
+              </div>
+              <div class="col-6">
+                <div class="data">
+                  <div class="big">Gewicht</div>
+                  <div class="small">250 g</div>
+                </div>
+                <div class="data">
+                  <div class="big">Abmessung</div>
+                  <div class="small">24cm x 3cm</div>
+                </div>
+                <div class="data">
+                  <div class="big">Zubreitung (empfohlen)</div>
+                  <div class="small">im Backofen <br>Ober-Unter-Hitze <br>bei 220° C</div>
+                </div>
+                <div class="data">
+                  <div class="big">Kohlenhydrate</div>
+                  <div class="small">106,2 g</div>
+                </div>
+                <div class="data">
+                  <div class="big">Energie</div>
+                  <div class="small">837 kcal</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- SECTION 4 -->
+    <section id="sec4" class="section sec4">
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col--1 offset-md-2 col-md-4 offset-lg-2 col-lg-4">
+            <h2>Erleben Sie die Model S</h2><br>
+            <a class="btn btn-primary">
+              Bestellen
+            </a>
+            <a class="btn btn-primary">
+              Geschmackstest
+            </a>
+          </div>
+          <div class="col--2 col-md-6 col-lg-6">
+            <img src="dist/img/hand.png">
+          </div>
+          <div class="col-12 footer">
+            <ul>
+              <li><a href="">Model S</a></li>
+              <li><a href="">Datenschutz u. Rechtsgrundlage</a></li>
+              <li><a href="">Impressum</a></li>
+              <li><a href="">Kontakt</a></li>
+            </ul>
+          </div>
+        </div>
 
+      </div>
 
-                    </div>
+    </section>
+  </main>
 
+  <!-- HTML ENDS -->
 
-                </section>
-                <!-- SECTION 2 -->
-                <section id="sec2" class="section sec2">
-                        <div class="top">
-                           
+  <script type="text/javascript">
+    console.log("START!");
+  </script>
 
+  <!-- Bundled Footer JS -->
+  <script type="text/javascript" src="dist/js/bundleFooter.js"></script>
 
-                          <div class="container-fluid facts">
-                            <div class="row">
-                              <div class="col-12 offset-md-9 col-md-3">
+  <!-- For some reasons fullpage and webpack wasnt working together! -->
+  <!-- <script type="text/javascript" src="node_modules/fullpage.js/dist/fullpage.js"></script> -->
+  <!-- <script type="text/javascript" src="node_modules/fullpage.js/vendors/scrolloverflow.min.js"></script> -->
 
-                                  <div class="row--1 fade-in-1">
-                                    <div class="fact big">12 <span>min</span></div>
-                                    <div class="fact small">im Backofen zuhause golbraun backen</div>
-                                  </div>
+</body>
 
-                                  <div class="row--1 fade-in-2">
-                                    <div class="fact big">200° <span>C</span></div>
-                                    <div class="fact small">bei der Einstellung Umluft</div>
-                                  </div>
-
-                                  <div class="row--1 fade-in-3">
-                                    <div class="fact big">220° <span>C</span></div>
-                                    <div class="fact small">bei der Einstellung Ober-Unter-Hitze</div>
-                                  </div>
-    
-                              </div>
-                            </div>
-                          </div>
-
-
-
-
-                        </div>
-                        <div class="bottom">
-
-                          <div class="container-lg">
-                            <div class="row">
-                              <div class="offset-0 col-12 offset-md-1 col-md-10  offset-lg-2 col-lg-8">
-                                <div class="row">
-                                    <div class="col-md-4">
-                                      <h2 class="slide-up-1">Performance</h2>
-                                      <h3 class="slide-up-1">Höchste Art <br>der Zubereitung</h3>
-                                      <a class="btn btn-primary slide-up-2">
-                                        Bestellen
-                                      </a> 
-                                    </div>
-                                    <div class="col-md-8 slide-up-1">
-                                      <p>Die Zubereitung der Model S ist ein wichtiger Punkt. Die Model S kümmert sich voll automatisch
-                                        um die selbstständige Zubereitung in einem Backofen ihrer Wahl. 
-                                        <br>Einfach in dem vorgeheizten Backofen bei 200° C Umluft oder 220° C Ober-Unter-Hitze für genau 12 min backen.</p>
-                                    </div>
-                                </div>
-                                
-                               
-                              </div>
-                            </div>
-                          </div>
-
-                        </div>
-                    </div>
-                  </div>
-                </section>
-                <!-- SECTION 3 -->
-                <section id="sec3" class="section sec3">
-                    <div class="container">
-                      <div class="row">
-                        <div class="col-md-6 slide-up-1">
-                          <img src="dist/img/Pizzaschatel.png">
-                        </div>
-                        <div class="col-md-6 datas slide-up-4">
-                          <h2>Model S <span>Wichtige Daten</span></h2>
-                          <div class="row">
-                            <div class="col-6 col-xl-4">
-                              <div class="data">
-                                <div class="big">Energie</div>
-                                <div class="small">837 kcal</div>
-                              </div>
-                              <div class="data">
-                                <div class="big">Kohlenhydrate</div>
-                                <div class="small">106,2 g</div>
-                              </div>
-                              <div class="data">
-                                <div class="big">Eiweiß</div>
-                                <div class="small">28,1 g</div>
-                              </div>
-                              <div class="data">
-                                <div class="big">Fett</div>
-                                <div class="small">31,7 g</div>
-                              </div>
-                            </div>
-                            <div class="col-6">
-                              <div class="data">
-                                <div class="big">Gewicht</div>
-                                <div class="small">250 g</div>
-                              </div>
-                              <div class="data">
-                                <div class="big">Abmessung</div>
-                                <div class="small">24cm x 3cm</div>
-                              </div>
-                              <div class="data">
-                                <div class="big">Zubreitung (empfohlen)</div>
-                                <div class="small">im Backofen <br>Ober-Unter-Hitze <br>bei 220° C</div>
-                              </div>
-                              <div class="data">
-                                <div class="big">Kohlenhydrate</div>
-                                <div class="small">106,2 g</div>
-                              </div>
-                              <div class="data">
-                                <div class="big">Energie</div>
-                                <div class="small">837 kcal</div>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                </section>
-                <!-- SECTION 4 -->
-                <section id="sec4" class="section sec4">
-                    <div class="container">
-                      <div class="row">
-                          <div class="offset-md-1 col-md-5 order-2 order-lg-1">
-                            <h2>Erleben Sie die Model S</h2><br>
-                            <a class="btn btn-primary">
-                              Bestellen
-                            </a> 
-                            <a class="btn btn-primary">
-                              Geschmackstest
-                            </a> 
-                          </div>
-                          <div class="col-md-6 order-1 order-lg-2">
-                            <img src="dist/img/Pizzaschatel.png">
-                          </div>
-                        <div class="col-12 footer order-3">
-                          <ul>
-                            <li><a href="">Model S</a></li>
-                            <li><a href="">Datenschutz u. Rechtsgrundlage</a></li>
-                            <li><a href="">Impressum</a></li>
-                            <li><a href="">Kontakt</a></li>
-                          </ul>
-                        </div>
-                      </div>
-
-                  </div>
-                  
-              </section>
-              </main>
-
-        <!-- HTML ENDS -->
-    
-        <!-- <script type="text/javascript" src="node_modules/jquery/dist/jquery.min.js"></script> -->
-        <!-- Bundled Footer JS -->
-        <script type="text/javascript" src="dist/js/bundleFooter.js"></script>
-
-        <!-- Webpack and Fullpage isnt working together.  
-        TODO: include Fullpage on its own! -->
-        <script type="text/javascript" src="scrolloverflow.js"></script>
-        <script type="text/javascript" src="fullpage.js"></script>
-
-          <!-- <script type="text/javascript" src="node_modules/fullpage.js/dist/fullpage.js"></script> -->
-        <!--<script type="text/javascript" src="node_modules/fullpage.js/vendors/scrolloverflow.min.js"></script> -->
-
-        <script type="text/javascript" src="node_modules/bootstrap/dist/js/bootstrap.js"></script>
-
-        <script type="text/javascript">
-          console.log("START!");
-
-        </script>
-
-
-
-    </body>
 </html>

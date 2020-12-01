@@ -8,6 +8,15 @@
          url('../fonts/HomepageBaukasten-Book.woff') format('woff'), /* Modern Browsers */
   }
 
+  @font-face {
+    font-family: 'GothamAlt';
+    font-style: bolder;
+    font-weight: 700;
+    src: url('../fonts/HomepageBaukasten-Bold.eot'), /* IE9 Compat Modes */
+         url('../fonts/HomepageBaukasten-Bold.ttf') format('ttf'), /* IE6-IE8 */
+         url('../fonts/HomepageBaukasten-Bold.woff2') format('woff2'), /* Super Modern Browsers */
+         url('../fonts/HomepageBaukasten-Bold.woff') format('woff'), /* Modern Browsers */
+  }
 
 
 

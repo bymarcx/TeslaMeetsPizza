@@ -216,8 +216,9 @@
 
                 span {
                     position: relative;
+                    font-size: 15px;
                     width: auto;
-
+                    color: rgba(black,0.7);
                     opacity: 0;
 
                     // background: rgba(255,255,255,0.8);
@@ -235,9 +236,9 @@
                     content: "";
                     display: block;
                     position: absolute;
-                    top: 0;
+                    top: 10px;
                     bottom: 0;
-                    left: 10px;
+                    left: -10px;
                     z-index: 9999999;
                     transform: scaleY(0);
 
@@ -276,7 +277,7 @@
 
             .annot-text.down {
                 &:before {
-                    // Nothing to change here!
+                    bottom: 10px;
                 }
 
                 span {

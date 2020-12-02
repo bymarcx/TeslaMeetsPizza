@@ -65,7 +65,7 @@ $(document).ready(function() {
     });
 
     //methods
-    $.fn.fullpage.setAllowScrolling(true);
+    fullpage_api.setAllowScrolling(true);
 
   }
 
@@ -78,19 +78,24 @@ $(document).ready(function() {
 
 $(document).ready(function () {
 
-    $('#losd').click(function(){
+    $('#los').click(function(){
 
         if(!$("#collapseExample").hasClass('show')){
 
-            document.getElementById("stage").style.display = "none";
-            document.getElementById("sec2").style.display = "none";
-            document.getElementById("sec3").style.display = "none";
-            document.getElementById("sec4").style.display = "none";
+            // document.getElementById("stage").style.display = "none";
+            // document.getElementById("sec2").style.display = "none";
+            // document.getElementById("sec3").style.display = "none";
+            // document.getElementById("sec4").style.display = "none";
 
             document.querySelector('#sec1').classList.add('fp-normal-scroll');
             document.querySelector('#sec1').classList.add('fp-scrollable');
+            //fullpage_api.setAllowScrolling(false);
 
-            $.fn.fullpage.setResponsive(true)
+            fullpage_api.reBuild();
+
+            $('#sec1').animate({
+              scrollTop: $("#collapseSec1").offset().top
+            }, 1000);
 
             // setTimeout(function() {
             //     $.fn.fullpage.setAllowScrolling(false);
@@ -98,10 +103,7 @@ $(document).ready(function () {
             //     console.log("set scrolling false;")
             // }, 100);
             
-            // document.getElementById("stage").style.display = "none";
-            // document.getElementById("sec2").style.display = "none";
-            // document.getElementById("sec3").style.display = "none";
-            // document.getElementById("sec4").style.display = "none";
+            
 
 
             // if (document.querySelector('#fp-nav') !== null) {
@@ -118,12 +120,16 @@ $(document).ready(function () {
         else {
 
 
-            document.getElementById("stage").style.display = "table";
-            document.getElementById("sec2").style.display = "table";
-            document.getElementById("sec3").style.display = "table";
-            document.getElementById("sec4").style.display = "table";
+            document.querySelector('#sec1').classList.remove('fp-normal-scroll');
+            document.querySelector('#sec1').classList.remove('fp-scrollable');
 
-            $.fn.fullpage.setResponsive(false);
+            //fullpage_api.setAllowScrolling(true);
+            
+            fullpage_api.reBuild();
+
+
+            
+            //$.fn.fullpage.moveTo(1);
 
             // setTimeout(function() {
             //   $.fn.fullpage.setAllowScrolling(true);
@@ -158,7 +164,7 @@ var prevScrollpos = window.pageYOffset;
 window.onscroll = function() {
   var currentScrollPos = window.pageYOffset;
 
-  if(currentScrollPos <= (window.innerHeight - 150) ) {
+  if( currentScrollPos <= (window.innerHeight - 150) ) {
     document.getElementById("header").style.background = "unset";
     document.getElementById("buttons").style.visibility = "hidden";
     document.getElementById("top").style.visibility = "hidden";

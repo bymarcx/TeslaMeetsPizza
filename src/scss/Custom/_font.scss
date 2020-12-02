@@ -38,6 +38,17 @@
     }
 }
 
+h1#headline {
+    text-align:center;
+    font-size: 30px;
+    font-weight: 600;
+    color: white;
+    
+    @include media-breakpoint-up(lg) {
+        font-size: 40px;
+    }    
+}
+
 h3 {
     @include h3;
 }

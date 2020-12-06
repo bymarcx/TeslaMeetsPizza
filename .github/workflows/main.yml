@@ -24,4 +24,4 @@ jobs:
           ARGS: "-rltgoDzvO --delete"
           SOURCE: "dist/"
           REMOTE_HOST: stag.rwd.bymarc.media
-          REMOTE_USER: me
+          REMOTE_USER: ${{ secrets.REMOTE_USER }}

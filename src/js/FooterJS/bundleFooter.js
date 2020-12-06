@@ -217,3 +217,6 @@ setTimeout(function() {
     });  
   });
 }, 1200);
+
+// ACTIVATE BOOTSTRAP TAB NAV
+$('#myTab').tabCollapse();

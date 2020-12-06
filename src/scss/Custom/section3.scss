@@ -1,12 +1,21 @@
 .sec3 {
     
+    .row {
+        @include media-breakpoint-up(lg) {
+            height: 100vh;
+        }
+    }
+
     .col-md-6.col--1 {
-        display: flex;
-        justify-content: center;
         padding: 00px;
 
+        @include media-breakpoint-up(md) {
+            padding: 0 7%;
+            height: 100vh;
+        }
+
         @include media-breakpoint-up(lg) {
-            padding: 0 50px;
+            padding: 0 10%;
 
         }
 
@@ -15,7 +24,15 @@
     img {
         width: 100%;
         height: auto;
-        align-self: center;
+       
+        @include media-breakpoint-up(md) {
+            position: relative;
+            width: 100%;
+            margin: auto;
+            top: 50%;
+            transform: translate(0, -50%);
+        }
+
     }
 
     .datas {
@@ -34,11 +51,57 @@
     h2 {
         @include h3;
         color: white;
+        margin-bottom: 40px;
     
         span {
             font-weight: 300;
         }
     }    
+
+    #myTab {
+        display: flex;
+        width: 100%;
+
+        li {
+            width: 100%;
+            margin-bottom: 10px;
+
+            @include media-breakpoint-up(lg) {
+                width: 50%;
+                margin-bottom:0;
+            
+                &:first-of-type() {
+                    padding-right: 10px;
+                }
+            }
+
+        }
+
+    }
+
+    .nav-tabs {
+        border-bottom: 0px;
+
+       
+
+        .btn.btn-primary {
+            border-color: rgba(255,255,255,0.5);
+            color: white;
+            width: 100%;
+            outline:none !important;
+            padding: 10px 0;
+
+            &:focus {
+                box-shadow: none;;
+            }
+
+            &.active {
+                background: none;
+                border-color: white;
+            }
+
+        }
+    }
 
     .data {
         color: white;

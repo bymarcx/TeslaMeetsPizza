@@ -1,5 +1,5 @@
 #stage {
-    background-image: url("../img/stage1.jpg");
+    background-image: url("../img/stage3b.png");
     background-size: cover;
     background-position: center;
 
@@ -17,6 +17,7 @@
 
     h1#headline {
         padding-top: 15%;
+        color: black;
 
         @include media-breakpoint-up(lg) {
             padding-top: 5%;
@@ -51,13 +52,13 @@
             padding: 0px 0 5px;
 
             .fact {
-                color: white;
+                color: black;
             }
             
 
 
             &:first-of-type, &:nth-of-type(2) {
-                border-right: 1px solid white;
+                border-right: 1px solid black;
             }
         }
             
@@ -65,16 +66,16 @@
             text-align:center;
             
             .btn.btn-primary {
-                color: white;
-                border-color: white;
+                color: black;
+                border-color: black;
                 position: relative;
                 top: 50%;
                 transform: translate(0, -50%);
 
                 &:hover {
-                    border-color: white;
-                    background: white;
-                    color: black;
+                    border-color: black;
+                    background: black;
+                    color: white;
                 }
 
             }
@@ -86,7 +87,7 @@
             margin-top: 10px;
         
             @media screen and (min-width: 440px) {
-                width: 410px;
+                width: 380px;
             }
         
             @include media-breakpoint-up(md) {
@@ -96,6 +97,20 @@
         
         }
 
+    }
+
+
+    .down {
+        width: 15px;
+        height: 15px;
+        border-bottom:2px solid black;
+        border-right: 2px solid black;
+        position: absolute;
+        bottom: 30px;
+        left: 50%;
+        transform: rotate(45deg) translate(-50%);
+        z-index: 99999;
+        cursor: pointer;
     }
 
 } // #stage

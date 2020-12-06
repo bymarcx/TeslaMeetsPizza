@@ -12,8 +12,10 @@
 
 #fp-nav ul li .fp-tooltip {
     display: block;
-    width: 50px;
+    width: 150px;
     color: black;
+    font-weight: 600;
+    text-transform: uppercase;
 
     transition: all .3s ease-in-out;
 }
@@ -27,11 +29,10 @@
 .fp-viewing-0 {
     #top {
         opacity: 1;
-        border: 1px solid red;
     }
 }
 
-.fp-viewing-0, .fp-viewing-3, .fp-viewing-4 {
+.fp-viewing-2, .fp-viewing-4, .fp-viewing-5 {
 
     #logo path {
         fill: white;

@@ -1,9 +1,11 @@
+
+
 #sec2 {
     .top {
-        height: 65vh;
-        background-image: url("../img/performance.jpg");
+        height: 70vh;
+        background-image: url("../img/backofen.jpg");
         background-size: cover;
-        background-position: 50% 30%;
+        background-position: 50% 75%;
         display: flex;
 
 
@@ -15,13 +17,37 @@
                 
             }
 
+            .icon {
+                width: 35px;
+                height: 35px;
+                margin-right: 20px;
+                display: inline-block;
+                vertical-align: middle;
+            
+
+                &.fan {
+                    background: url("../img/icons/fan-icon.png");
+                    background-size: contain;
+                    background-repeat: no-repeat;
+                    background-position: center;
+                }
+                
+                &.two-side {
+                    background: url("../img/icons/Two-Side-Icon.png");
+                    background-size: contain;
+                    background-repeat: no-repeat;
+                    background-position: center;
+                }
+
+            }
+
             .row {
                 height: 100%;
                 align-content: center;
             }
 
             .row--1 {                
-                padding: 0px 25px;
+                padding: 0px 0px;
 
                 &:first-of-type:after, &:nth-of-type(2):after {
                     content: "";
@@ -32,6 +58,11 @@
                     margin-top: 30px;
                     margin-bottom: 30px;
                 }
+
+                @include media-breakpoint-up(md) {
+                    padding: 0px 25px;
+                }
+
             }
 
 
@@ -47,16 +78,21 @@
         display: flex;
 
         @include media-breakpoint-up(lg) {
-            height: 35vh;
+            height: 30vh;
         }
         
         .col-md-4 {
             // padding-bottom: 20px;
         }
 
-        .container-md {
+        .container-lg {
             display: flex;
             align-items: center;
+
+            @include media-breakpoint-between(sm,md) {
+                margin: 0 30px;
+            }
+
         }
 
         .btn.btn-primary {
@@ -64,6 +100,11 @@
 
             @include media-breakpoint-down(lg) {
                 margin-bottom: 30px;
+                width: auto;
+            }
+
+            @include media-breakpoint-down(xs) {
+                width: 100%;
             }
         }
     }

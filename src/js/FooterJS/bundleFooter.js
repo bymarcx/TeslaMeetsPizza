@@ -43,7 +43,7 @@ $(document).ready(function() {
       lockAnchors: true,
       navigation: true,
       navigationPosition: 'left',
-      navigationTooltips: ['Model 3', 'Geschmack', 'Performance', 'Technische Daten', 'Kaufen'],
+      navigationTooltips: ['Model S', 'Geschmack', 'Performance', 'Nachhaltigkeit', 'Wichtige Daten', 'Bestellen'],
 
       afterLoad: function( origin, destination, direction){
       var loadedSection = this;
@@ -189,3 +189,31 @@ window.onscroll = function() {
 
   }
 }
+
+
+// COUNT UP
+
+setTimeout(function() {
+  $('.counter').each(function() {
+    var $this = $(this),
+        countTo = $this.attr('data-count');
+    
+    $({ countNum: $this.text()}).animate({
+      countNum: countTo
+    },
+
+    {
+
+      duration: 1500,
+      easing:'swing',
+      step: function() {
+        $this.text(Math.floor(this.countNum));
+      },
+      complete: function() {
+        $this.text(this.countNum);
+        //alert('finished');
+      }
+
+    });  
+  });
+}, 1200);

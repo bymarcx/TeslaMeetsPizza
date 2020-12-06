@@ -39,6 +39,10 @@
                 margin: 0 15px;
             }
 
+            @include media-breakpoint-between(sm,sm) {
+                padding: 0 50px;
+            }
+
         }
 
         .col--2 {
@@ -120,7 +124,7 @@
 
                 a {
                     color: white;
-                    font-size: 12px;
+                    font-size: 14px;
                     
                     &:hover {
                         text-decoration: none;

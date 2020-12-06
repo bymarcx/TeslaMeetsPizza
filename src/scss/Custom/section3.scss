@@ -19,7 +19,16 @@
     }
 
     .datas {
-        margin-top: 100px;
+        margin-top: 20px;
+
+        @include media-breakpoint-between(sm,md) {
+            padding: 0 50px;
+        }
+
+        @include media-breakpoint-up(md) {
+            margin-top: 100px;
+        }
+
     }
 
     h2 {
@@ -27,9 +36,7 @@
         color: white;
     
         span {
-            font-size: 26px;
-            opacity: .8;
-            font-weight: 100;
+            font-weight: 300;
         }
     }    
 
@@ -49,12 +56,18 @@
         }
 
         .big {
-            font-size: 14px;
-            font-weight: bolder;
+            font-size: 16px;
+            font-weight: 600;
+
+            span {
+                font-size: 14px;
+                opacity: 0.8;
+            }
+
         }
 
         .small {
-            font-size: 14px;
+            font-size: 16px;
             opacity: .7;
         }
 

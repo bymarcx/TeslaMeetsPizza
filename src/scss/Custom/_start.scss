@@ -2,113 +2,9 @@
 // All great things starts here.
 
 html,body {
-    font-family: 'GothamAlt' !important;
+    font-family: proxima-nova !important;
     overflow-x: hidden !important;
 }
-
-@mixin slide-in($waitTime) {
-    animation: 
-        slide-up #{$waitTime},
-        slide-in 4s #{$waitTime};
-}
-
-
-@mixin fade-in($waitTime) {
-    animation: 
-        fade-up #{$waitTime},
-        fade-in 4s #{$waitTime};
-}
-
-@mixin fade-in-long($waitTime) {
-    animation: 
-        fade-up 1s,
-        fade-in 6s 1s;
-}
-
-
-.section.active .slide-up-1 {
-    opacity: 1;
-    @include slide-in('1s');
-}
-
-.section.active .slide-up-2{
-    opacity: 1;
-    @include slide-in('1.3s');
-}
-
-.section.active .slide-up-3 {
-    opacity: 1;
-    @include slide-in('1.5s');
-}
-
-.section.active .slide-up-4 {
-    opacity: 1;
-    @include slide-in('2s');
-}
-
-
-
-.section.active .fade-in-1 {
-    opacity: 1;
-    @include fade-in('1s');
-}
-
-.section.active .fade-in-long-1 {
-    opacity: 1;
-    @include fade-in-long('1s');
-}
-
-.section.active .fade-in-2{
-    opacity: 1;
-    @include fade-in('1.5s');
-}
-
-.section.active .fade-in-3 {
-    opacity: 1;
-    @include fade-in('1.9s');
-}
-
-.section.active .fade-in-4 {
-    opacity: 1;
-    @include fade-in('2.3s');
-}
-
-.slide-up-1, .slide-up-2, .slide-up-3, .slide-up-4,
-.fade-in-1, .fade-in-2, .fade-in-3, .fade-in-4 {
-    position: relative;
-}
-
-@keyframes slide-up {
-    0% {top: 50px; opacity: 0;}
-    60% {top: 50px; opacity: 0;}
-    100% {top: 0px; opacity: 1;}
-  }
-
-  @keyframes slide-down {
-    0% {top: 0px; opacity: 1;}
-    100% {top: 50px; opacity: 0;}
-  }
-
-
-  @keyframes fade-up {
-    0% {opacity: 0;}
-    60% {opacity: 0;}
-    100% {opacity: 1;}
-  }
-
-// .delay-1 {
-//     animation-delay: 1s;
-// }
-// .delay-2 {
-//     animation-delay: 1.7s;
-// }
-// .delay-3 {
-//     animation-delay: 2.3s;
-// }
-// .delay-4 {
-//     animation-delay: 3.0s;
-// }
-
 
 
 .fact {
@@ -117,17 +13,16 @@ html,body {
 
     &.big {
         font-size: 23px;
-        font-weight: bolder;
-        margin-bottom: 5px;
+        font-weight: 600;
 
-        span {
+        span:not(.counter) {
             font-size: 16px;
         }
 
         @include media-breakpoint-up(lg) {
             font-size: 35px;
 
-            span {
+            span:not(.counter) {
                 font-size: 18px;
             }
         }
@@ -135,6 +30,7 @@ html,body {
     }
     &.small {
         font-size: 11px;
+        line-height: 20px;
 
         @include media-breakpoint-up(lg) {
             font-size: 14px;
@@ -157,7 +53,7 @@ html,body {
 }
 
 #header {
-    z-index: 9999;
+    z-index: 999999999;
 }
 
 #top {
@@ -172,6 +68,8 @@ html,body {
     transform: rotate(45deg);
     border-top: 3px solid black;
     border-left: 3px solid black;
+
+    transition: 0.3s all ease-in-out;
 }
 
 @include media-breakpoint-down(md) {
@@ -258,7 +156,7 @@ html,body {
     border: 3px solid black;
     border-radius: 100px;
     background-color: unset;
-    padding: 7px 30px;
+    padding: 7px 40px;
     text-transform: uppercase;
     width:100%;
     font-size: 12px;

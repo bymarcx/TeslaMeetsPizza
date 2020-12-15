@@ -28,7 +28,7 @@ console.log("TESTING");
 $(document).ready(function() {
 
   // It's only fullpage on desktop!
-  if($(window).width() > 992) {
+  //if($(window).width() > 992) {
 
     // initalizing fullpage.js / Letz fetz!
     var fullPageInstance = new fullpage('#fullpage', {
@@ -44,6 +44,7 @@ $(document).ready(function() {
       navigation: true,
       navigationPosition: 'left',
       navigationTooltips: ['Model S', 'Geschmack', 'Performance', 'Nachhaltigkeit', 'Wichtige Daten', 'Bestellen'],
+      responsiveWidth: 992,
 
       afterLoad: function( origin, destination, direction){
       var loadedSection = this;
@@ -58,6 +59,7 @@ $(document).ready(function() {
         }
         if(destination.index == 2){
           //document.getElementById("textlogo").style.fill="white";
+          
         }
 
       } 
@@ -67,7 +69,7 @@ $(document).ready(function() {
     //methods
     fullpage_api.setAllowScrolling(true);
 
-  }
+ // }
 
   });
 
@@ -219,4 +221,4 @@ setTimeout(function() {
 }, 1200);
 
 // ACTIVATE BOOTSTRAP TAB NAV
-$('#myTab').tabCollapse();
+// $('#myTab').tabCollapse();

@@ -1,3 +1,12 @@
+
+// MAKE THIS SEC RESPONIVE
+.fp-responsive .sec3,
+.fp-responsive .sec3 .fp-slide,
+.fp-responsive .sec3 .fp-tableCell{
+    height: auto !important;
+}
+
+
 .sec3 {
     
     .row {
@@ -89,10 +98,11 @@
             color: white;
             width: 100%;
             outline:none !important;
-            padding: 10px 0;
+            padding: 7px 0;
 
             &:focus {
-                box-shadow: none;;
+                box-shadow: none;
+                background: none;
             }
 
             &.active {

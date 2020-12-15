@@ -1,21 +1,26 @@
+// MAKE THIS SEC RESPONIVE
+.fp-responsive .sec4,
+.fp-responsive .sec4 .fp-slide,
+.fp-responsive .sec4 .fp-tableCell {
+    height: auto !important;
+}
+
 .sec4 {
-
-@include media-breakpoint-down(sm) {
-    padding-top: 50px;
-}
-
-@include media-breakpoint-down(lg) {
-    padding-top: 100px;
-}
-
-    img {
-        width:100%;
+    @include media-breakpoint-down(sm) {
+        padding-top: 50px;
     }
 
+    @include media-breakpoint-down(md) {
+        //padding-top: 100px;
+    }
+
+    img {
+        width: 100%;
+    }
 
     .container-fluid {
-        padding-left:0;
-        padding-right:0;
+        padding-left: 0;
+        padding-right: 0;
         height: auto;
         padding-bottom: 10px;
 
@@ -27,10 +32,9 @@
         .row {
             height: 100%;
             align-content: center;
-            
         }
 
-        .col-md-4 {
+        .col-md-6 {
             align-self: center;
         }
 
@@ -39,20 +43,25 @@
                 margin: 0 15px;
             }
 
-            @include media-breakpoint-between(sm,sm) {
-                padding: 0 50px;
+            @include media-breakpoint-down(md) {
+                order: 2;
             }
 
+            @include media-breakpoint-between(sm, sm) {
+                padding: 0 50px;
+            }
         }
 
         .col--2 {
             @include media-breakpoint-down(sm) {
-                margin: 80px 0 50px;
+                margin: 20px 0 50px;
+            }
+
+            @include media-breakpoint-down(md) {
+                order: 1;
             }
         }
-
     }
-
 
     h2 {
         @include h3;
@@ -81,11 +90,14 @@
             background: white;
             color: black;
         }
-
     }
 
     .footer {
         text-align: center;
+
+        @include media-breakpoint-down(md) {
+            order: 3;
+        }
 
         @include media-breakpoint-up(lg) {
             position: absolute;
@@ -98,10 +110,9 @@
         }
 
         ul {
-
             @include media-breakpoint-up(md) {
                 display: flex;
-                margin-top:0px;
+                margin-top: 0px;
             }
 
             @include media-breakpoint-down(md) {
@@ -112,10 +123,9 @@
             list-style: none;
             // border: 1px solid red;
             justify-content: center;
-            padding:0;
+            padding: 0;
 
             li {
-
                 padding: 15px 0 5px;
 
                 @include media-breakpoint-up(md) {
@@ -125,15 +135,15 @@
                 a {
                     color: white;
                     font-size: 14px;
-                    
+                    transition: 0.1s all ease-in-out;
+
                     &:hover {
                         text-decoration: none;
+                        color: rgba(white, 0.7);
+                        transition: 0.1s all ease-in-out;
                     }
                 }
-                
             }
         }
     }
-
-
 }

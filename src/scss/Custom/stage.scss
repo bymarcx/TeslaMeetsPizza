@@ -2,6 +2,7 @@
     background-image: url("../img/stage3b.png");
     background-size: cover;
     background-position: center;
+    box-shadow: inset 0em -20em 20em -5em white;
 
     @include media-breakpoint-down(lg) {
         height: 100vh;

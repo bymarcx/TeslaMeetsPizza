@@ -3,11 +3,11 @@
 #sec2 {
     .top {
         height: 70vh;
-        background-image: url("../img/backofen.jpg");
+        background-image: url("../img/backofen_retuschiert.png");
         background-size: cover;
         background-position: 50% 75%;
         display: flex;
-
+        box-shadow: inset -22em -2em 13em rgba(0,0,0,0.6);
 
         .facts {
             position: relative;

@@ -1,8 +1,10 @@
 // *****  START.SCSS  *****
 // All great things starts here.
 
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700&display=swap');
+
 html,body {
-    font-family: proxima-nova !important;
+    font-family: proxima-nova, 'Montserrat' !important;
     overflow-x: hidden !important;
 }
 
@@ -129,8 +131,8 @@ html,body {
 
     #logo {
         position: fixed;
-        top:15px;
-        left: 20px;
+        top:20px;
+        left: 25px;
         display: block;
         z-index: 9999;
 

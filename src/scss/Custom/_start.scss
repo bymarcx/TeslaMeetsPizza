@@ -1,5 +1,5 @@
 // *****  START.SCSS  *****
-// All great things starts here.
+// All great things start here.
 
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700&display=swap');
 
@@ -139,6 +139,10 @@ html,body {
         svg path {
             fill: black;
             transition: .3s fill ease;
+        }
+
+        &:hover {
+            cursor: pointer;
         }
     }
 

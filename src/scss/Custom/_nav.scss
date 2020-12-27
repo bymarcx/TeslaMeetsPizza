@@ -26,47 +26,51 @@
     opacity: 1;
 }
 
-.fp-viewing-0 {
-    #top {
-        opacity: 1;
+@include media-breakpoint-up(lg) {
+    .fp-viewing-0 {
+        #top {
+            opacity: 1;
+        }
+    }
+    
+    .fp-viewing-2, .fp-viewing-4, .fp-viewing-5 {
+    
+        #logo path {
+            fill: white;
+        }
+    
+        #top {
+            border-color: white;
+        }
+    
+        #fp-nav ul li a.active span, #fp-nav ul li:hover a.active span {
+            background: white;
+            transition: all .3s ease-in-out;
+        }
+    
+        #fp-nav ul li  span, #fp-nav ul li:hover span {
+            background: white;
+            transition: all .3s ease-in-out;
+    
+        }
+    
+        #fp-nav ul li a span, #fp-nav ul li:hover a span {
+            background: rgba(white,0.3);
+            transition: all .3s ease-in-out;
+    
+        }
+    
+        #fp-nav ul li .fp-tooltip {
+            color: white;
+            transition: all .3s ease-in-out;
+    
+        }
+    
+    
     }
 }
 
-.fp-viewing-2, .fp-viewing-4, .fp-viewing-5 {
 
-    #logo path {
-        fill: white;
-    }
-
-    #top {
-        border-color: white;
-    }
-
-    #fp-nav ul li a.active span, #fp-nav ul li:hover a.active span {
-        background: white;
-        transition: all .3s ease-in-out;
-    }
-
-    #fp-nav ul li  span, #fp-nav ul li:hover span {
-        background: white;
-        transition: all .3s ease-in-out;
-
-    }
-
-    #fp-nav ul li a span, #fp-nav ul li:hover a span {
-        background: rgba(white,0.3);
-        transition: all .3s ease-in-out;
-
-    }
-
-    #fp-nav ul li .fp-tooltip {
-        color: white;
-        transition: all .3s ease-in-out;
-
-    }
-
-
-}
 
 #fp-nav ul li a.active span, #fp-nav ul li:hover a.active span {
     margin: 0px;

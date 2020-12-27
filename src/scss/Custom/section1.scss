@@ -266,7 +266,7 @@
                 span {
                     position: relative;
                     font-size: 15px;
-                    font-weight: 500;
+                    font-weight: 700;
                     width: auto;
                     color: rgba(black,0.7);
                     opacity: 0;
@@ -381,8 +381,8 @@
             height: 32%;
 
             @include media-breakpoint-down(lg) {
-                top: 65%;
-                height: 32%;
+                top: 62%;
+                height: 37%;
                 width: 30%;
                 left: 17%;
             }

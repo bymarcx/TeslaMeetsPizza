@@ -4,28 +4,40 @@ window.$ = $;
 
 import 'popper.js';
 import 'bootstrap';
-
 import fullpage from 'fullpage.js';
 
 require("./Custom/custom");
 
 $(document).ready(function() {
 
-    // initalizing fullpage.js / Letz fetz!
+    // initalizing fullpage.js :: Letz fetz!
     var fullPageInstance = new fullpage('#fullpage', {
 
       // options here
       scrollBar: true,
       autoScrolling:true,
-      //scrollOverflow:true,
       scrollHorizontally: false,
       css3: true,
-      //showActiveTooltip: true,
       lockAnchors: true,
       navigation: true,
       navigationPosition: 'left',
       navigationTooltips: ['Model S', 'Geschmack', 'Performance', 'Nachhaltigkeit', 'Wichtige Daten', 'Bestellen'],
       responsiveWidth: 992,
+
+      afterRender: function(){
+
+        // make tooltip clickable
+        Array.prototype.forEach.call(document.querySelectorAll('#fp-nav ul li .fp-tooltip'), function(t, i){
+          t.addEventListener('click', function(e) {
+            event.target.parentElement.querySelector('a').dispatchEvent(new MouseEvent('click', {
+              bubbles: true,
+              cancelable: true,
+              view: window
+            }))
+          });
+        });
+  
+      },
 
     });
 
@@ -35,7 +47,7 @@ $(document).ready(function() {
   });
 
 
-// MOBILE NAVBAR!!!
+// MOBILE NAVBAR
 // When the user scrolls down, hide the navbar. When the user scrolls up, show the navbar
 var prevScrollpos = window.pageYOffset;
 window.onscroll = function() {
@@ -88,7 +100,6 @@ setTimeout(function() {
       },
       complete: function() {
         $this.text(this.countNum);
-        //alert('finished');
       }
 
     });  

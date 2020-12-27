@@ -1,12 +1,14 @@
+// *****  SECTION5.SCSS  *****
+// Styles for section 5
+
 #sec5 {
     .col--2.bild {
-        background-image: url("../img/nachhaltigkeit1.png") !important;
+        background-image: url("../img/nachhaltigkeit.png") !important;
         background-size: cover;
         background-position: 50% 75%;
         height: 100vh;
         width: 100%;
         box-shadow: inset 0em -40em 40em -10em white;
-
 
         @include media-breakpoint-down(md) {
             height: 100vh;
@@ -16,7 +18,6 @@
             text-align: left;
             color: black;
             padding-right: 30px;
-
         }
 
         .row.facts {
@@ -27,42 +28,39 @@
                 line-height: 30px;
                 padding-bottom: 10px;
             }
-            
+
             .col-12 {
                 height: auto;
-                
             }
-        
 
-        .col-md-4:first-of-type, .col-md-4:nth-of-type(2) {
-            border-right: 1px solid black;
-        }
+            .col-md-4:first-of-type,
+            .col-md-4:nth-of-type(2) {
+                border-right: 1px solid black;
+            }
 
-        @include media-breakpoint-down(sm) {
-            .col-md-4 {
-                border-right: 0px !important;
-                padding: 0px 25px;
+            @include media-breakpoint-down(sm) {
+                .col-md-4 {
+                    border-right: 0px !important;
+                    padding: 0px 25px;
 
-                &:first-of-type:after, &:nth-of-type(2):after {
-                    content: "";
-                    width: 50px;
-                    height: 1px;
-                    background: black;
-                    display: block;
-                    margin-top: 30px;
-                    margin-bottom: 30px;
+                    &:first-of-type:after,
+                    &:nth-of-type(2):after {
+                        content: "";
+                        width: 50px;
+                        height: 1px;
+                        background: black;
+                        display: block;
+                        margin-top: 30px;
+                        margin-bottom: 30px;
+                    }
                 }
             }
         }
-
-        }
-
     }
-
 }
 
-
-#sec1, #sec5 {
+#sec1,
+#sec5 {
     position: relative;
 
     .cta {
@@ -189,18 +187,18 @@
     }
 
     .col--2 {
-            display: flex;
-            justify-content: center;
+        display: flex;
+        justify-content: center;
 
-            background: #f2f2f2;
-            
-            position: relative;
-            padding: 50px 0;
+        background: #f2f2f2;
 
-            @include media-breakpoint-up(lg) {
-                height: 100vh;
-                padding: 0px;
-            }
+        position: relative;
+        padding: 50px 0;
+
+        @include media-breakpoint-up(lg) {
+            height: 100vh;
+            padding: 0px;
+        }
 
         .annots-container {
             background-image: url("../img/annots1.png");
@@ -218,32 +216,28 @@
                 padding-top: 84.25%;
                 min-width: 150%;
             }
-            
-        }
-
-    }
-
-
-@include media-breakpoint-up(lg) {
-    &.active .annots .annot-text {
-        span {
-            transition: 0.3s opacity ease-in 1.3s;
-            opacity: 1 !important;
-        }
-
-        &:before {
-            transition: 0.4s all ease-in 1s;
-            transform: scaleY(1) !important;
-            content: "";
-        }
-
-        &:after {
-            transition: 0.1s opacity ease-in 1.3s;
-            opacity: 1 !important;
         }
     }
-}
-    
+
+    @include media-breakpoint-up(lg) {
+        &.active .annots .annot-text {
+            span {
+                transition: 0.3s opacity ease-in 1.3s;
+                opacity: 1 !important;
+            }
+
+            &:before {
+                transition: 0.4s all ease-in 1s;
+                transform: scaleY(1) !important;
+                content: "";
+            }
+
+            &:after {
+                transition: 0.1s opacity ease-in 1.3s;
+                opacity: 1 !important;
+            }
+        }
+    }
 
     .annots {
         .annot-first,
@@ -257,18 +251,18 @@
                 width: 300px;
                 height: 100%;
 
-                 @include media-breakpoint-down(lg) {
-                     text-align:right;
-                     position: relative;
-                     width: 100%;
-                 }
+                @include media-breakpoint-down(lg) {
+                    text-align: right;
+                    position: relative;
+                    width: 100%;
+                }
 
                 span {
                     position: relative;
                     font-size: 15px;
-                    font-weight: 700;
+                    font-weight: 600;
                     width: auto;
-                    color: rgba(black,0.7);
+                    color: rgba(black, 0.7);
                     opacity: 0;
 
                     @include media-breakpoint-down(lg) {
@@ -291,8 +285,8 @@
                     @include media-breakpoint-down(lg) {
                         transform: scaleY(1);
 
-                         left: unset;
-                         right: -10px;
+                        left: unset;
+                        right: -10px;
                     }
                 }
 
@@ -314,15 +308,13 @@
                     @include media-breakpoint-down(lg) {
                         opacity: 1;
 
-                         left: unset;
-                         right: -13.5px;
+                        left: unset;
+                        right: -13.5px;
                     }
                 }
             }
 
-
             .annot-text.down {
-
                 @include media-breakpoint-down(lg) {
                     text-align: right;
                     position: relative;
@@ -331,7 +323,7 @@
 
                 &:before {
                     bottom: 10px;
-                    
+
                     @include media-breakpoint-down(lg) {
                         right: -10px !important;
                         left: unset;
@@ -376,9 +368,9 @@
 
         .annot-second {
             left: 45%;
-            top: 67%;
+            top: 62%;
 
-            height: 32%;
+            height: 37%;
 
             @include media-breakpoint-down(lg) {
                 top: 62%;

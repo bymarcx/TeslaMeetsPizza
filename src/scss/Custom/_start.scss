@@ -1,13 +1,11 @@
 // *****  START.SCSS  *****
 // All great things start here.
 
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700&display=swap');
-
-html,body {
-    font-family: proxima-nova, 'Montserrat' !important;
+html,
+body {
+    font-family: proxima-nova !important;
     overflow-x: hidden !important;
 }
-
 
 .fact {
     text-align: center;
@@ -28,7 +26,6 @@ html,body {
                 font-size: 18px;
             }
         }
-
     }
     &.small {
         font-size: 11px;
@@ -38,17 +35,13 @@ html,body {
             font-size: 14px;
         }
     }
-
 } // .fact
 
-
-
-.section {    
+.section {
     @include media-breakpoint-up(lg) {
         height: 100vh;
     }
-    
-    
+
     .fp-tableCell {
         vertical-align: top;
     }
@@ -81,20 +74,18 @@ html,body {
         height: auto;
         width: 100%;
         z-index: 9999;
-        
+
         transition: all 0.5s ease-in;
 
         #logo {
             position: relative;
-            top:5px;
+            top: 5px;
             left: 10px;
             display: block;
-            
 
             svg path {
                 fill: black;
             }
-
         }
 
         #buttons {
@@ -120,7 +111,6 @@ html,body {
             padding: 4px 24px;
             margin: 30px 5px 10px;
         }
-
     }
 }
 
@@ -131,14 +121,14 @@ html,body {
 
     #logo {
         position: fixed;
-        top:20px;
+        top: 20px;
         left: 25px;
         display: block;
         z-index: 9999;
 
         svg path {
             fill: black;
-            transition: .3s fill ease;
+            transition: 0.3s fill ease;
         }
 
         &:hover {
@@ -151,11 +141,7 @@ html,body {
         top: 20px;
         right: 20px;
     }
-
 }
-
-
-
 
 .btn.btn-primary {
     color: black;
@@ -164,10 +150,12 @@ html,body {
     background-color: unset;
     padding: 7px 40px;
     text-transform: uppercase;
-    width:100%;
+    width: 100%;
     font-size: 12px;
 
-    &:hover, &:focus, &:active {
+    &:hover,
+    &:focus,
+    &:active {
         background-color: black;
         border-color: black;
         color: $light;
@@ -176,8 +164,7 @@ html,body {
     @include media-breakpoint-up(md) {
         font-size: 14px;
         width: unset;
-   }
-
+    }
 }
 
 .btn.btn-secondary {
@@ -186,7 +173,7 @@ html,body {
     border: none;
     font-size: 12px;
     margin: 0;
-    padding:0;
+    padding: 0;
 
     .label {
         position: relative;
@@ -207,13 +194,14 @@ html,body {
         font-size: 25px;
     }
 
-    &:hover .button, &:focus, &:active {
+    &:hover .button,
+    &:focus,
+    &:active {
         background-color: black;
         border-color: black;
         color: $light;
     }
 }
-
 
 #sec3 {
     background: black;
@@ -222,4 +210,3 @@ html,body {
 #sec4 {
     background: black;
 }
-

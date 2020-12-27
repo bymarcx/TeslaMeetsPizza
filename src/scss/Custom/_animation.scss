@@ -1,108 +1,110 @@
+// *****  ANIMATION.SCSS  *****
+// Let's get animate!
+
 @mixin slide-in($waitTime) {
-    animation: 
-        slide-up #{$waitTime},
-        slide-in 4s #{$waitTime};
+    animation: slide-up #{$waitTime}, slide-in 4s #{$waitTime};
 }
 
-
 @mixin fade-in($waitTime) {
-    animation: 
-        fade-up #{$waitTime},
-        fade-in 4s #{$waitTime};
+    animation: fade-up #{$waitTime}, fade-in 4s #{$waitTime};
 }
 
 @mixin fade-in-long($waitTime) {
-    animation: 
-        fade-up 1s,
-        fade-in 6s 1s;
+    animation: fade-up 1s, fade-in 6s 1s;
 }
 
-
 @include media-breakpoint-up(lg) {
-
     .section.active .slide-up-1 {
         opacity: 1;
-        @include slide-in('1s');
+        @include slide-in("1s");
     }
 
-    .section.active .slide-up-2{
+    .section.active .slide-up-2 {
         opacity: 1;
-        @include slide-in('1.4s');
+        @include slide-in("1.4s");
     }
 
     .section.active .slide-up-3 {
         opacity: 1;
-        @include slide-in('1.7s');
+        @include slide-in("1.7s");
     }
 
     .section.active .slide-up-4 {
         opacity: 1;
-        @include slide-in('1.9s');
+        @include slide-in("1.9s");
     }
-
-
 
     .section.active .fade-in-1 {
         opacity: 1;
-        @include fade-in('1s');
+        @include fade-in("1s");
     }
 
     .section.active .fade-in-long-1 {
         opacity: 1;
-        @include fade-in-long('1s');
+        @include fade-in-long("1s");
     }
 
-    .section.active .fade-in-2{
+    .section.active .fade-in-2 {
         opacity: 1;
-        @include fade-in('1.5s');
+        @include fade-in("1.5s");
     }
 
     .section.active .fade-in-3 {
         opacity: 1;
-        @include fade-in('1.9s');
+        @include fade-in("1.9s");
     }
 
     .section.active .fade-in-4 {
         opacity: 1;
-        @include fade-in('2.3s');
+        @include fade-in("2.3s");
     }
 
-    .slide-up-1, .slide-up-2, .slide-up-3, .slide-up-4,
-    .fade-in-1, .fade-in-2, .fade-in-3, .fade-in-4 {
+    .slide-up-1,
+    .slide-up-2,
+    .slide-up-3,
+    .slide-up-4,
+    .fade-in-1,
+    .fade-in-2,
+    .fade-in-3,
+    .fade-in-4 {
         position: relative;
     }
 
     @keyframes slide-up {
-        0% {top: 50px; opacity: 0;}
-        60% {top: 50px; opacity: 0;}
-        100% {top: 0px; opacity: 1;}
+        0% {
+            top: 50px;
+            opacity: 0;
+        }
+        60% {
+            top: 50px;
+            opacity: 0;
+        }
+        100% {
+            top: 0px;
+            opacity: 1;
+        }
     }
 
     @keyframes slide-down {
-        0% {top: 0px; opacity: 1;}
-        100% {top: 50px; opacity: 0;}
+        0% {
+            top: 0px;
+            opacity: 1;
+        }
+        100% {
+            top: 50px;
+            opacity: 0;
+        }
     }
-
 
     @keyframes fade-up {
-        0% {opacity: 0;}
-        60% {opacity: 0;}
-        100% {opacity: 1;}
+        0% {
+            opacity: 0;
+        }
+        60% {
+            opacity: 0;
+        }
+        100% {
+            opacity: 1;
+        }
     }
-
-    // .delay-1 {
-    //     animation-delay: 1s;
-    // }
-    // .delay-2 {
-    //     animation-delay: 1.7s;
-    // }
-    // .delay-3 {
-    //     animation-delay: 2.3s;
-    // }
-    // .delay-4 {
-    //     animation-delay: 3.0s;
-    // }
-
-
 }
-

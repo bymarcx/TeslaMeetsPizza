@@ -1,3 +1,6 @@
+// *****  SECTION4.SCSS  *****
+// Styles for section 4
+
 // MAKE THIS SEC RESPONIVE
 .fp-responsive .sec4,
 .fp-responsive .sec4 .fp-slide,
@@ -8,10 +11,6 @@
 .sec4 {
     @include media-breakpoint-down(sm) {
         padding-top: 50px;
-    }
-
-    @include media-breakpoint-down(md) {
-        //padding-top: 100px;
     }
 
     img {
@@ -103,7 +102,6 @@
             position: absolute;
             bottom: 0px;
             width: 100%;
-            // border: 1px solid green;
             left: 50%;
             transform: translate(-50%);
             text-align: left;
@@ -121,7 +119,6 @@
 
             margin-top: 100px;
             list-style: none;
-            // border: 1px solid red;
             justify-content: center;
             padding: 0;
 

@@ -4,7 +4,9 @@
 ## NODE MODULES 
 node_modules
 
-## IGNORE DIST AND BUNDLED
+## IGNORE DIST
 dist
 
+## IGNORE BUILD
 build
+build/*

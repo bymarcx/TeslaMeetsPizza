@@ -53,21 +53,26 @@ var prevScrollpos = window.pageYOffset;
 window.onscroll = function() {
   var currentScrollPos = window.pageYOffset;
 
-  if( currentScrollPos <= (window.innerHeight - 150) ) {
+  if( currentScrollPos <= (window.innerHeight) ) {
     document.getElementById("header").style.background = "unset";
     document.getElementById("buttons").style.visibility = "hidden";
     document.getElementById("top").style.visibility = "hidden";
-
+    document.getElementById("header").style.width = "unset";
+    
     document.getElementById("header").style.position = "absolute";
     document.getElementById("header").style.background = "unset";
   }
-  else {
+  else if (currentScrollPos <= (window.innerHeight + 300 )) {
     document.getElementById("header").style.background = "white";
     document.getElementById("buttons").style.visibility = "visible";
     document.getElementById("top").style.visibility = "visible";
+    document.getElementById("header").style.width = "100%";
 
     document.getElementById("header").style.position = "fixed";
     document.getElementById("header").style.background = "#fff";
+  }
+  else {
+    document.getElementById("header").style.top = "-150px";
 
     if (prevScrollpos > currentScrollPos) {
       document.getElementById("header").style.top = "0";

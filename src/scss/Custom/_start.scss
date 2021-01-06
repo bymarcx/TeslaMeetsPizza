@@ -51,6 +51,7 @@ body {
     z-index: 999999999;
 }
 
+
 #top {
     position: absolute;
     visibility: hidden;
@@ -65,6 +66,10 @@ body {
     border-left: 3px solid black;
 
     transition: 0.3s all ease-in-out;
+}
+
+body:not(.fp-viewing-0) #top {
+    visibility: visible !important;
 }
 
 @include media-breakpoint-down(md) {
@@ -110,6 +115,20 @@ body {
             font-size: 10px;
             padding: 4px 24px;
             margin: 30px 5px 10px;
+        }
+
+
+        &.fixed {
+            background: #fff;
+            
+            .buttons {
+                visibility: visible;
+            }
+
+            .top {
+                visibility: visible;
+            }
+
         }
     }
 }

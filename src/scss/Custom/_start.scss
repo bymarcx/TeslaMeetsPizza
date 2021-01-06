@@ -121,7 +121,7 @@ body:not(.fp-viewing-0) #top {
         &.fixed {
             background: #fff;
             
-            .buttons {
+            #buttons {
                 visibility: visible;
             }
 
@@ -157,8 +157,7 @@ body:not(.fp-viewing-0) #top {
 
     #top {
         position: fixed;
-        top: 20px;
-        right: 20px;
+        top: 25px;
     }
 }
 

@@ -1,5 +1,5 @@
 # TeslaMeetsPizza
 
-Tesla Meets Pizza :: Project for Responsive Webdesign :: OMB-4
+TeslaMeetsPizza :: Project for Responsive Webdesign :: OMB-4
 
-(C) 2020 Marc Eberhard
+(C) 2020-21 Marc Eberhard

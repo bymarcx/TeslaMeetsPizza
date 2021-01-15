@@ -2,7 +2,7 @@ import $ from 'jquery';
 window.jQuery = $;
 window.$ = $;
 
-import 'popper.js';
+//import 'popper.js'; // no need for popper in this project!
 import 'bootstrap';
 import fullpage from 'fullpage.js';
 
